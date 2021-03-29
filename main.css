@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+li {
+    list-style-type: none;
+}
+
 body {
     box-sizing: border-box;
 }
@@ -12,9 +17,59 @@ nav {
     flex-direction: row;
     justify-content: space-between;
 }
+
 nav ul {
     width: 80%;
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background: #a2d4f2;
+    padding: 5rem;
+}
+
+/* PARTIE HAUTE DU FOOTER */
+
+footer .top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INFOS DU FOOTER */
+
+footer .top-section .infos-footer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+    border-right: 1px #000 solid;
+}
+
+/* FORMULAIRE DU FOOTER */
+
+footer .top-section .infos-footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top-section .social-media {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    border-left: 1px #000 solid;
+}
+
+/* PARTIE BASSE DU FOOTER */
+
+footer .bottom-section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
