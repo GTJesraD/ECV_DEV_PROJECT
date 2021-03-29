@@ -13,20 +13,20 @@
 <body>
     <nav>
         <a href="#">LOGO</a>
-            <ul>
-                <li>
-                    <a href="#">Notre equipe</a>
-                </li>
-                <li>
-                    <a href="#">Notre offre</a>
-                </li>
-                <li>
-                    <a href="#">Nouveautés</a>
-                </li>
-                <li>
-                    <a href="#">Nous contacter</a>
-                </li>
-            </ul>
+        <ul>
+            <li>
+                <a href="#">Notre equipe</a>
+            </li>
+            <li>
+                <a href="#">Notre offre</a>
+            </li>
+            <li>
+                <a href="#">Nouveautés</a>
+            </li>
+            <li>
+                <a href="#">Nous contacter</a>
+            </li>
+        </ul>
         <a href="#">FR/EN</a>
     </nav>
 
@@ -35,7 +35,27 @@
     <div>3</div>
     <div>4</div>
     <div>5</div>
-    <div>6</div>
+    <div id="formulaire">
+        <form method="POST" action="#">
+            <h2>Formulaire de contact</h2>
+            <label for="nom">Votre nom :</label>
+            <input type="text" name="nom" id="nom">
+            <br>
+            <label for="prenom">Votre prénom :</label>
+            <input type="text" name="prenom" id="prenom">
+            <br>
+            <label for="num">Votre numéro de téléphone :</label>
+            <input type="tel" name="num" id="num">
+            <br>
+            <label for="mail">Votre e-mail :</label>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <label for="message">Votre demande :</label>
+            <textarea name="message" id="message" cols="30" rows="1" placeholder="Ecrivez nous ..."></textarea>
+            <br>
+            <button type="submit" name="envoyer" id="envoyer">Envoyer</button>
+        </form>
+    </div>
     <footer></footer>
     <script></script>
 </body>
