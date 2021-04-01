@@ -80,12 +80,16 @@ footer .top-section .social-media {
     height: 100%;
 }
 
-footer .top-section .social-media li {
+footer .top-section .social-media li a {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
     width: 50%;
+}
+
+footer .top-section .social-media li img {
+    margin-right: 1rem;
 }
 
 /* ON VISE LES TITRES DE NIVEAU 2 */
@@ -125,12 +129,12 @@ footer img {
 
 /* BORDER BOTTOM SUR LES LIENS */
 
-footer a {
+footer a>span {
     position: relative;
     color: black;
 }
 
-footer a:not(.btn-remonter)::after {
+footer a>span:not(.btn-remonter)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -143,11 +147,11 @@ footer a:not(.btn-remonter)::after {
     transition: transform 250ms ease-in;
 }
 
-footer a:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
+footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
     transform: scaleX(1);
     outline: none;
 }
 
-a:-moz-focusring {
+a>span:-moz-focusring {
     outline: none;
 }
