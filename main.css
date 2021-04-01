@@ -67,8 +67,37 @@ footer .top-section .infos-footer {
 /* FORMULAIRE DU FOOTER */
 
 footer .top-section .infos-footer form {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+footer .top-section .infos-footer form div {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .top-section .infos-footer form #newsletter-input {
+    margin-right: 1rem;
+    border: 1px solid #000;
+    font-size: .9rem;
+    padding: 0 .4rem;
+}
+
+footer .top-section .infos-footer form #newsletter-submit {
+    background: #2c3f59;
+    border: none;
+    padding: .5rem 1.5rem;
+    color: #fff;
+    font-size: .9rem;
+    transition: transform 250ms ease;
+    cursor: pointer;
+}
+
+footer .top-section .infos-footer form #newsletter-submit:hover, footer .top-section .infos-footer form #newsletter-submit:focus {
+    transform: scale(0.9, 0.9);
 }
 
 footer .top-section .social-media {
@@ -90,6 +119,11 @@ footer .top-section .social-media li a {
 
 footer .top-section .social-media li img {
     margin-right: 1rem;
+    transition: transform 150ms ease;
+}
+
+footer .top-section .social-media li img:hover, footer .top-section .social-media li img:focus {
+    transform: scale(1.2, 1.2);
 }
 
 /* ON VISE LES TITRES DE NIVEAU 2 */
@@ -123,6 +157,16 @@ footer .bottom-section li a {
 
 /* BOUTON REMONTER EN HAUT */
 
+footer .bottom-section li a[href="#menu-navigation"] img {
+    transition: transform 250ms ease;
+    transform-origin: bottom;
+}
+
+footer .bottom-section li a[href="#menu-navigation"] img:hover, footer .bottom-section li a[href="#menu-navigation"] img:focus {
+    transform: translateY(-.3rem);
+    transform-origin: top;
+}
+
 footer img {
     width: 1.5rem;
 }
@@ -143,15 +187,18 @@ footer a>span:not(.btn-remonter)::after {
     height: 1.5px;
     background: black;
     transform: scaleX(0);
-    transform-origin: center;
+    transform-origin: right;
     transition: transform 250ms ease-in;
 }
 
 footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
     transform: scaleX(1);
+    transform-origin: left;
     outline: none;
 }
 
-a>span:-moz-focusring {
+/* Permet d'effacer la outline presente sur Firefox */
+
+:-moz-focusring {
     outline: none;
 }
