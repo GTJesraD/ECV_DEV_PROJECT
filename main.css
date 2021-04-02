@@ -9,6 +9,7 @@ body {
 /* Ici commence le css lié au nav */
 
 nav {
+    position: fixed;
     width: 100%;
     display: flex;
     flex-direction: row;
