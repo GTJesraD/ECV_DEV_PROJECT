@@ -52,7 +52,7 @@
                 <form action="POST">
                     <label for="newsletter-input">Notre Newsletter</label>
                     <div>
-                        <input type="email" placeholder="E-mail" id="newsletter-input">
+                        <input type="email" placeholder="E-mail" id="newsletter-input" required>
                         <input type="submit" value="S'abonner" id="newsletter-submit">
                     </div>
                 </form>
@@ -88,21 +88,24 @@
                             <span>Github</span>
                             <img src="ressources/github.svg" width="30" alt="Logo Github">
                         </a>
-
                     </li>
                 </ul>
             </div>
         </div>
         <!-- Liens du bas + bouton remonter -->
         <ul class="bottom-section">
-            <li><a href="#"><span>Mentions légales</span></a></li>
-            <li><a href="#"><span>Politique de confidentialité</span></a></li>
+            <div>
+                <li><a href="#"><span>Mentions légales</span></a></li>
+                <li><a href="#"><span>Politique de confidentialité</span></a></li>
+            </div>
             <li><a href="#menu-navigation" class="btn-remonter">
                     <img width="30" src="ressources/up-arrow.svg" alt="Icône pour remonter">
                 </a>
             </li>
-            <li><a href="#"><span>Nos CGV</span></a></li>
-            <li><a href="#"><span>Accessibilité</span></a></li>
+            <div>
+                <li><a href="#"><span>Nos CGV</span></a></li>
+                <li><a href="#"><span>Accessibilité</span></a></li>
+            </div>
         </ul>
     </footer>
     <script></script>

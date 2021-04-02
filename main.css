@@ -1,16 +1,29 @@
+/* On definit les styles de base et les variables css pour les couleurs et fonts */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.top-section h2 {
+    margin-bottom: 1rem;
 }
 
 :root {
-    --couleurPrincipale: #a2d4f2;
-    --couleurSecondaire: #f2b035;
+    --clr-bg: #2c3f59;
+    --clr-acc: #f2b035;
+    --clr-txt: #fff;
+    --ft-title: ;
+    --ft-txt: ;
 }
 
-li, a {
-    list-style-type: none;
-    text-decoration: none;
+/* Permet d'effacer la outline presente sur Firefox */
+
+:-moz-focusring {
+    outline: none;
 }
 
 body {
@@ -32,41 +45,45 @@ nav ul {
     justify-content: space-between;
 }
 
-/* FOOTER */
+/* Footer */
 
 footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background: #a2d4f2;
-    height: 50vh;
+    justify-content: flex-start;
+    background: #2c3f59;
+    color: var(--clr-txt);
 }
 
-/* PARTIE HAUTE DU FOOTER */
+footer img {
+    width: 1.5rem;
+}
 
-footer .top-section {
+/* Partie haute du footer (informations et reseaux sociaux) */
+
+.top-section {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    padding: 4rem;
-    height: 50%;
+    align-items: center;
+    margin: 4rem 0;
+    height: 13rem;
 }
 
-/* INFOS DU FOOTER */
+/* Informations */
 
-footer .top-section .infos-footer {
+.infos-footer {
     display: flex;
     flex-direction: column;
     padding-right: 5rem;
-    border-right: 1px #000 solid;
+    border-right: 1px solid var(--clr-txt);
     width: 25%;
     height: 100%;
 }
 
-/* FORMULAIRE DU FOOTER */
+/* Formulaire Newsletter */
 
-footer .top-section .infos-footer form {
+.infos-footer form {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
@@ -74,42 +91,50 @@ footer .top-section .infos-footer form {
     justify-content: flex-start;
 }
 
-footer .top-section .infos-footer form div {
+.infos-footer form div {
     display: flex;
     flex-direction: row;
 }
 
-footer .top-section .infos-footer form #newsletter-input {
-    margin-right: 1rem;
-    border: 1px solid #000;
+#newsletter-input {
+    margin: 0 1rem 0 0;
+    border: 1px solid #fff;
     font-size: .9rem;
     padding: 0 .4rem;
+    width: 100%;
 }
 
-footer .top-section .infos-footer form #newsletter-submit {
-    background: #2c3f59;
+#newsletter-input:required {
+    box-shadow: none;
+}
+
+#newsletter-submit {
+    margin: 0;
+    background: var(--clr-acc);
     border: none;
     padding: .5rem 1.5rem;
-    color: #fff;
+    color: var(--clr-txt);
     font-size: .9rem;
     transition: transform 250ms ease;
     cursor: pointer;
 }
 
-footer .top-section .infos-footer form #newsletter-submit:hover, footer .top-section .infos-footer form #newsletter-submit:focus {
+#newsletter-submit:hover, #newsletter-submit:focus, #newsletter-submit:active {
     transform: scale(0.9, 0.9);
 }
 
-footer .top-section .social-media {
+/* Reseaux sociaux */
+
+.social-media {
     display: flex;
     flex-direction: column;
     padding-left: 5rem;
-    border-left: 1px #000 solid;
+    border-left: 1px var(--clr-txt) solid;
     width: 25%;
     height: 100%;
 }
 
-footer .top-section .social-media li a {
+.social-media li a {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -117,65 +142,64 @@ footer .top-section .social-media li a {
     width: 50%;
 }
 
-footer .top-section .social-media li img {
+.social-media li img {
     margin-right: 1rem;
     transition: transform 150ms ease;
 }
 
-footer .top-section .social-media li img:hover, footer .top-section .social-media li img:focus {
+.social-media li img:hover, .social-media li img:focus {
     transform: scale(1.2, 1.2);
 }
 
-/* ON VISE LES TITRES DE NIVEAU 2 */
+/* On applique une marge en bas a tout les elements de la section haute du footer sauf: div, h2, ul, form */
 
-footer .top-section h2 {
-    margin-bottom: 1rem;
-}
-
-/* ON VISE TOUT LES ELEMENTS ENFANTS DE LA PARTIE HAUTE DU FOOTER SAUF LES H2, UL, FORM et les DIV */
-
-footer .top-section *:not(div, h2, ul, form) {
+.top-section *:not(div, h2, ul, form) {
     margin-bottom: .4rem;
 }
 
-/* PARTIE BASSE DU FOOTER */
+/* Partie basse du footer (mentions legales, CGV) */
 
-footer .bottom-section {
+.bottom-section {
     display: flex;
     flex-direction: row;
-    margin: 1rem 0;
+    justify-content: space-between;
+    padding: 1rem 0;
 }
 
-footer .bottom-section li {
-    width: 20%;
+.bottom-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bottom-section li {
+    width: 40%;
     text-align: center;
 }
 
-footer .bottom-section li a {
-    width: auto;
+.bottom-section>* {
+    width: calc(100% / 3);
+    text-align: center;
 }
 
-/* BOUTON REMONTER EN HAUT */
+/* Bouton pour remonter en haut de la page */
 
-footer .bottom-section li a[href="#menu-navigation"] img {
+a[href="#menu-navigation"] img {
+    filter: invert(100%);
     transition: transform 250ms ease;
     transform-origin: bottom;
 }
 
-footer .bottom-section li a[href="#menu-navigation"] img:hover, footer .bottom-section li a[href="#menu-navigation"] img:focus {
+a[href="#menu-navigation"] img:hover, a[href="#menu-navigation"] img:focus {
     transform: translateY(-.3rem);
     transform-origin: top;
 }
 
-footer img {
-    width: 1.5rem;
-}
-
-/* BORDER BOTTOM SUR LES LIENS */
+/* Bordure annimée sur les liens */
 
 footer a>span {
     position: relative;
-    color: black;
+    color: var(--clr-txt);
 }
 
 footer a>span:not(.btn-remonter)::after {
@@ -185,7 +209,7 @@ footer a>span:not(.btn-remonter)::after {
     bottom: -3px;
     width: 100%;
     height: 1.5px;
-    background: black;
+    background: var(--clr-txt);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
@@ -197,8 +221,72 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
     outline: none;
 }
 
-/* Permet d'effacer la outline presente sur Firefox */
+/* Medias queries pour differentes tailles d'ecran */
 
-:-moz-focusring {
-    outline: none;
+/* Pour les tailles intermediaires */
+
+@media screen and (max-width: 1300px) {
+    .infos-footer form div {
+        flex-direction: column;
+    }
+    .top-section {
+        padding: 1rem;
+        height: 20rem;
+    }
+    #newsletter-input {
+        height: 2rem;
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .infos-footer, .social-media {
+        padding: 1rem;
+        width: 40%;
+    }
+}
+
+/* Pour les petits ecrans */
+
+@media screen and (max-width: 600px) {
+    .bottom-section {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    .bottom-section>* {
+        width: calc(100% / 3);
+    }
+    .bottom-section div {
+        flex-direction: column;
+    }
+    .bottom-section li {
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    .bottom-section>*:nth-child(2) {
+        align-self: center;
+        text-align: center;
+        transform: scale(1.7, 1.7);
+    }
+    .infos-footer, .social-media {
+        width: 50%;
+    }
+    .top-section {
+        padding: 0;
+    }
+    /* On supprime les animations du footer sur les petits ecrans */
+    footer a>span:not(.btn-remonter)::after {
+        content: "";
+        position: static;
+    }
+    footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
+        transform: none;
+    }
+    a[href="#menu-navigation"] img:hover, a[href="#menu-navigation"] img:focus {
+        transform: none;
+    }
+    .social-media li img:hover, .social-media li img:focus {
+        transform: none;
+    }
+    #newsletter-submit:hover, #newsletter-submit:focus {
+        transform: none;
+    }
 }
