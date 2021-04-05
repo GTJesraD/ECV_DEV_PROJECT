@@ -1,23 +1,28 @@
 /* On definit les styles de base et les variables css pour les couleurs et fonts */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-.top-section h2 {
-    margin-bottom: 1rem;
-}
-
 :root {
     --clr-bg: #2c3f59;
     --clr-acc: #f2b035;
     --clr-txt: #fff;
     --ft-title: ;
     --ft-txt: ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: var(--ft-txt);
+}
+
+h1, h2, h3 {
+    font-family: var(--ft-title);
+}
+
+.top-section h2 {
+    margin-bottom: 1rem;
 }
 
 /* Permet d'effacer la outline presente sur Firefox */
@@ -113,7 +118,7 @@ footer img {
     background: var(--clr-acc);
     border: none;
     padding: .5rem 1.5rem;
-    color: var(--clr-txt);
+    color: #000;
     font-size: .9rem;
     transition: transform 250ms ease;
     cursor: pointer;
@@ -147,6 +152,8 @@ footer img {
     transition: transform 150ms ease;
 }
 
+/* Test logo github */
+
 .social-media li img:hover, .social-media li img:focus {
     transform: scale(1.2, 1.2);
 }
@@ -162,7 +169,7 @@ footer img {
 .bottom-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem 0;
 }
 
@@ -180,6 +187,10 @@ footer img {
 .bottom-section>* {
     width: calc(100% / 3);
     text-align: center;
+}
+
+.bottom-section>li {
+    width: 20%;
 }
 
 /* Bouton pour remonter en haut de la page */
@@ -260,6 +271,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
     .bottom-section li {
         margin-bottom: 1rem;
         text-align: left;
+        width: 100%;
     }
     .bottom-section>*:nth-child(2) {
         align-self: center;
@@ -290,3 +302,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
         transform: none;
     }
 }
+
+/* Adaptation pour le print */
+
+@media print {}
