@@ -306,3 +306,136 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
 /* Adaptation pour le print */
 
 @media print {}
+
+/*Début partie Team*/
+#img1, #img2, #img3, #img4{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: space-around;
+    
+}
+
+li p{
+    text-align: center;
+    margin-top: 5px;
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #BBE2F2;
+    font-size: 2em;
+}
+.team{
+    display: grid;
+    width: 50%;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+.title_team{
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.block1, .block2, .block3, .block4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.block1{
+   grid-column: 1;
+   grid-row: 2;
+   border: 1px solid #BBE2F2;
+
+}
+
+.block2{
+    grid-column: 3;
+    grid-row: 2;
+    border: 1px solid #BBE2F2;
+
+}
+
+.logo{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.block3{
+    grid-column: 1;
+    grid-row: 4;
+    border: 1px solid #BBE2F2;
+}
+
+.block4{
+    grid-column: 3;
+    grid-row: 4;
+    border: 1px solid #BBE2F2;
+
+
+}
+#image_circle {
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#seal{
+    width: 150px;
+    height: 250px;
+    
+}
+
+/*Design Responsif*/
+    /*Grand mobile & Tablette*/
+@media only screen and (max-width: 800px){
+    .title_team{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .block1{
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 20px;
+    }
+    .block2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #seal{
+        display: none;
+    }
+    .block3{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .block4{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .team{
+        display: grid;
+        width: 50%;
+        margin: auto;
+        grid-gap: 1em;
+    }
+    h1{
+        text-align: center;
+        margin: auto;
+    }
+}
+    /*Petit mobile / montre */
+@media only screen and (max-width: 540px){
+    .team{
+        width: 75%;
+    }
+}
+
+/*Fin présentation Team*/
