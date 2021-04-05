@@ -369,7 +369,7 @@ li p {
     margin-bottom: 10px;
 }
 
-h2 {
+.title_team h2 {
     display: flex;
     text-align: center;
     margin-bottom: 30px;
@@ -473,7 +473,7 @@ li {
         margin: auto;
         grid-gap: 1em;
     }
-    h2 {
+    .title_team h2 {
         text-align: center;
         margin: auto;
     }
@@ -569,6 +569,10 @@ textarea[name=message] {
 /* Fin formulaire */
 
 /*Début contenuebis */
+.contenubis h2{
+    color: #BBE2F2;
+    font-size: 2em;
+}
 .contenubis{
     display: grid;
     width: 60%;
