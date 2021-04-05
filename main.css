@@ -537,4 +537,29 @@ textarea[name=message]{
 }
 
 /* Fin formulaire */
+
+/* Grille tarifaire */
+
+.bloc_tarif_h2 {
+    margin: 5%;
+}
+
+.tarif_contenant {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div[class*=tarif_content_bloc]{
+    background-color: yellow;
+    height: 550px;
+    width: 350px;
+    border: solid black 1px;
+    flex: 0.2 1 350px;
+    margin: 5px;
+ 
+}
+/* Fin grille tarifaire */
+
 /*Fin présentation Team*/
