@@ -35,6 +35,7 @@ h1, h2, h3 {
 
 nav {
     position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -70,6 +71,8 @@ nav ul a:hover, nav ul a:focus {
 #logo {
     margin: 10px;
 }
+
+/* Slideshow */
 
 /* Footer */
 
