@@ -6,6 +6,7 @@
     --clr-txt: #fff;
     --ft-title: ;
     --ft-txt: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
