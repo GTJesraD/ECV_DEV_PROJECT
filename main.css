@@ -31,15 +31,19 @@ h1, h2, h3 {
     outline: none;
 }
 
-body {
-    box-sizing: border-box;
-}
+/* Ici commence le css lié au nav */
 
 nav {
+    position: fixed;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #AFC5F0;
+}
+
+nav li {
+    width: 20%;
 }
 
 nav ul {
@@ -48,6 +52,23 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    padding: 0 5%;
+}
+
+nav ul a:hover, nav ul a:focus {
+    color: white;
+    border-bottom: 2px solid gold;
+    outline: none;
+}
+
+#logo {
+    margin: 10px;
 }
 
 /* Footer */
