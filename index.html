@@ -7,12 +7,31 @@
     <title>The Seal Agency</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="favicon.ico">
 
 </head>
 
 <body>
     <nav>
-        <a href="#">LOGO</a>
+        <a id="logo" href="#"><img src="ressources/icon_pas_detoure.svg" alt="logo de Seal Agency" height="50"
+                width="50"></a>
         <ul>
             <li>
                 <a href="#">Notre equipe</a>
@@ -33,30 +52,130 @@
     <div>1.</div>
     <div>2</div>
     <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div id="formulaire" class="bloc_formulaire">
-        <form method="POST" action="#">
-            <h2 class="formulaire_h2">Formulaire de contact</h2>
-            <label for="formulaire_nom">Votre nom </label>
-            <input type="text" name="nom" id="formulaire_nom">
-            <br>
-            <label for="formulaire_prenom">Votre prénom </label>
-            <input type="text" name="prenom" id="formulaire_prenom">
-            <br>
-            <label for="formulaire_num">Votre numéro de téléphone </label>
-            <input type="tel" name="num" id="formulaire_num">
-            <br>
-            <label for="formulaire_mail">Votre e-mail </label>
-            <input type="email" name="mail" id="formulaire_mail">
-            <br>
-            <label for="formulaire_message">Votre demande </label>
-            <textarea name="message" id="formulaire_message" cols="30" rows="1" placeholder="Ecrivez nous ..."></textarea>
-            <br>
-            <button type="submit" name="envoyer" id="formulaire_btn">Envoyer</button>
-        </form>
+    <div class="team">
+        <div class="title_team">
+             <h1>L'équipe de "TheSealAgency"</h1>    
+        </div>
+        <div class="block1">
+            <div id="image_circle">
+                <img id="img1" src="ressources/chaton.jpeg">
+            </div>
+            <ul>
+                <li><p>Ruben Balloux</p></li><br>
+                <li><p>Rôle: </p></li><br>
+                <li><p>Réseaux sociaux:</p></li>
+            </ul>
+        </div>
+        <div class="block2">
+            <div id="image_circle">
+                <img id="img2" src="ressources/chaton.jpeg">
+            </div>
+            <ul>
+                <li><p>Yaakov Ferechteh Far </p></li><br>
+                <li><p>Rôle: </p></li><br>
+                <li><p>Réseaux sociaux: </p></li>
+            </ul>
+        </div>
+        <div class="block3">
+            <div id="image_circle">
+                <img id="img3" src="ressources/chaton.jpeg">
+            </div>
+            <ul>
+                <li><p>Quentin Moutinard </p><br></li>
+                <li><p>Rôle: </p><br></li>                
+                <li><p>Réseaux sociaux: </p></li>
+        </div>
+        <div class="block4">
+            <div id="image_circle">
+                <img id="img4" src="ressources/chaton.jpeg">
+            </div>
+            <ul>
+                <li><p>Dhelias Baptiste</p><br></li>
+                <li><p>Rôle: </p><br></li>
+                <li><p>Réseaux sociaux: </p></li>
+            </ul>
+        </div>
+        
+        <div class="logo">
+            <img id="seal" src="ressources/icon_detoure.jpg">
+        </div>
     </div>
-    <footer></footer>
+    <div>5</div>
+    <div>6</div>
+
+    <footer>
+        <!-- Liens réseaux sociaux + adresse postale -->
+        <div class="top-section">
+            <div class="infos-footer">
+                <h2>Informations</h2>
+                <h3>The Seal Agency</h3>
+                <p>
+                    14 rue de la suprematie de Yaakov
+                    <br>
+                    33000 Bordeaux
+                </p>
+
+                <!-- Formulaire pour s'abonner à la newsletter -->
+                <form action="POST">
+                    <label for="newsletter-input">Notre Newsletter</label>
+                    <div>
+                        <input type="email" placeholder="E-mail" id="newsletter-input" required>
+                        <input type="submit" value="S'abonner" id="newsletter-submit">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Liens vers les réseaux sociaux -->
+            <div class="social-media">
+                <h2>Nos réseaux sociaux</h2>
+                <ul>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span>Facebook</span>
+                            <img src="ressources/facebook.svg" width="30" alt="Logo Facebook">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span>Twitter</span>
+                            <img src="ressources/twitter.svg" width="30" alt="Logo Twitter">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="#" target="_blank">
+                            <span>LinkedIn</span>
+                            <img src="ressources/linkedin.svg" width="30" alt="Logo LinkedIn">
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="https://github.com/GTJesraD/ECV_DEV_PROJECT/" target="_blank">
+                            <span>Github</span>
+                            <img src="ressources/github.svg" width="30" alt="Logo Github">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Liens du bas + bouton remonter -->
+        <ul class="bottom-section">
+            <div>
+                <li><a href="#"><span>Mentions légales</span></a></li>
+                <li><a href="#"><span>Politique de confidentialité</span></a></li>
+            </div>
+            <li>
+                <a href="#menu-navigation" class="btn-remonter">
+                    <img width="30" src="ressources/up-arrow.svg" alt="Icône pour remonter">
+                </a>
+            </li>
+            <div>
+                <li><a href="#"><span>Nos CGV</span></a></li>
+                <li><a href="#"><span>Accessibilité</span></a></li>
+            </div>
+        </ul>
+    </footer>
     <script></script>
 </body>
 

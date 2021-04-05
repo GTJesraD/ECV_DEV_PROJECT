@@ -1,96 +1,462 @@
+/* On definit les styles de base et les variables css pour les couleurs et fonts */
+
+:root {
+    --clr-bg: #2c3f59;
+    --clr-acc: #f2b035;
+    --clr-txt: #fff;
+    --ft-title: ;
+    --ft-txt: ;
+}
+
 * {
     margin: 0;
     padding: 0;
-}
-body {
     box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: var(--ft-txt);
 }
 
+h1, h2, h3 {
+    font-family: var(--ft-title);
+}
+
+.top-section h2 {
+    margin-bottom: 1rem;
+}
+
+/* Permet d'effacer la outline presente sur Firefox */
+
+:-moz-focusring {
+    outline: none;
+}
+
+/* Ici commence le css lié au nav */
+
 nav {
+    position: fixed;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: #AFC5F0;
 }
+
+nav li {
+    width: 20%;
+}
+
 nav ul {
     width: 80%;
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.bloc_formulaire {
-    display: flex;
     align-items: center;
-    justify-content: center;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    padding: 0 5%;
+}
+
+nav ul a:hover, nav ul a:focus {
+    color: white;
+    border-bottom: 2px solid gold;
+    outline: none;
+}
+
+#logo {
+    margin: 10px;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    background: #2c3f59;
+    color: var(--clr-txt);
 }
-form {
+
+footer img {
+    width: 1.5rem;
+}
+
+/* Partie haute du footer (informations et reseaux sociaux) */
+
+.top-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+    height: 13rem;
+}
+
+/* Informations */
+
+.infos-footer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5rem;
+    border-right: 1px solid var(--clr-txt);
+    width: 25%;
+    height: 100%;
+}
+
+/* Formulaire Newsletter */
+
+.infos-footer form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.infos-footer form div {
+    display: flex;
+    flex-direction: row;
+}
+
+#newsletter-input {
+    margin: 0 1rem 0 0;
+    border: 1px solid #fff;
+    font-size: .9rem;
+    padding: 0 .4rem;
+    width: 100%;
+}
+
+#newsletter-input:required {
+    box-shadow: none;
+}
+
+#newsletter-submit {
+    margin: 0;
+    background: var(--clr-acc);
+    border: none;
+    padding: .5rem 1.5rem;
+    color: #000;
+    font-size: .9rem;
+    transition: transform 250ms ease;
+    cursor: pointer;
+}
+
+#newsletter-submit:hover, #newsletter-submit:focus, #newsletter-submit:active {
+    transform: scale(0.9, 0.9);
+}
+
+/* Reseaux sociaux */
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    border-left: 1px var(--clr-txt) solid;
+    width: 25%;
+    height: 100%;
+}
+
+.social-media li a {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+}
+
+.social-media li img {
+    margin-right: 1rem;
+    transition: transform 150ms ease;
+}
+
+/* Test logo github */
+
+.social-media li img:hover, .social-media li img:focus {
+    transform: scale(1.2, 1.2);
+}
+
+/* On applique une marge en bas a tout les elements de la section haute du footer sauf: div, h2, ul, form */
+
+.top-section *:not(div, h2, ul, form) {
+    margin-bottom: .4rem;
+}
+
+/* Partie basse du footer (mentions legales, CGV) */
+
+.bottom-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.bottom-section div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bottom-section li {
+    width: 40%;
+    text-align: center;
+}
+
+.bottom-section>* {
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+.bottom-section>li {
+    width: 20%;
+}
+
+/* Bouton pour remonter en haut de la page */
+
+a[href="#menu-navigation"] img {
+    filter: invert(100%);
+    transition: transform 250ms ease;
+    transform-origin: bottom;
+}
+
+a[href="#menu-navigation"] img:hover, a[href="#menu-navigation"] img:focus {
+    transform: translateY(-.3rem);
+    transform-origin: top;
+}
+
+/* Bordure annimée sur les liens */
+
+footer a>span {
+    position: relative;
+    color: var(--clr-txt);
+}
+
+footer a>span:not(.btn-remonter)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1.5px;
+    background: var(--clr-txt);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 250ms ease-in;
+}
+
+footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    outline: none;
+}
+
+/* Medias queries pour differentes tailles d'ecran */
+
+/* Pour les tailles intermediaires */
+
+@media screen and (max-width: 1300px) {
+    .infos-footer form div {
+        flex-direction: column;
+    }
+    .top-section {
+        padding: 1rem;
+        height: 20rem;
+    }
+    #newsletter-input {
+        height: 2rem;
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .infos-footer, .social-media {
+        padding: 1rem;
+        width: 40%;
+    }
+}
+
+/* Pour les petits ecrans */
+
+@media screen and (max-width: 600px) {
+    .bottom-section {
+        padding: 1rem;
+        justify-content: space-between;
+    }
+    .bottom-section>* {
+        width: calc(100% / 3);
+    }
+    .bottom-section div {
+        flex-direction: column;
+    }
+    .bottom-section li {
+        margin-bottom: 1rem;
+        text-align: left;
+        width: 100%;
+    }
+    .bottom-section>*:nth-child(2) {
+        align-self: center;
+        text-align: center;
+        transform: scale(1.7, 1.7);
+    }
+    .infos-footer, .social-media {
+        width: 50%;
+    }
+    .top-section {
+        padding: 0;
+    }
+    /* On supprime les animations du footer sur les petits ecrans */
+    footer a>span:not(.btn-remonter)::after {
+        content: "";
+        position: static;
+    }
+    footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)::after {
+        transform: none;
+    }
+    a[href="#menu-navigation"] img:hover, a[href="#menu-navigation"] img:focus {
+        transform: none;
+    }
+    .social-media li img:hover, .social-media li img:focus {
+        transform: none;
+    }
+    #newsletter-submit:hover, #newsletter-submit:focus {
+        transform: none;
+    }
+}
+
+/* Adaptation pour le print */
+
+@media print {}
+
+/*Début partie Team*/
+#img1, #img2, #img3, #img4{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: space-around;
+    
+}
+
+li p{
+    text-align: center;
+    margin-top: 5px;
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #BBE2F2;
+    font-size: 2em;
+}
+.team{
     display: grid;
-    grid-template-rows: repeat(9, 50px);
-    grid-template-columns: auto auto 150px auto auto;
+    width: 50%;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+.title_team{
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
 }
 
-.formulaire_h2{
-grid-column: 2/5;
-text-align: center;
+.block1, .block2, .block3, .block4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.block1{
+   grid-column: 1;
+   grid-row: 2;
+   border: 1px solid #BBE2F2;
+
 }
 
+.block2{
+    grid-column: 3;
+    grid-row: 2;
+    border: 1px solid #BBE2F2;
 
-
-label[for=formulaire_nom]{
-    grid-column: 1/2;
-    align-self: end;
 }
 
-input[name=nom]{
-    grid-column:1/3 ;
-    grid-row: 3/4;
+.logo{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
 }
 
-label[for=formulaire_prenom]{
-    grid-column: 4/5;
-    align-self: end;
+.block3{
+    grid-column: 1;
+    grid-row: 4;
+    border: 1px solid #BBE2F2;
 }
 
-input[name=prenom]{
-    grid-column: 4/6;
+.block4{
+    grid-column: 3;
+    grid-row: 4;
+    border: 1px solid #BBE2F2;
+
+
+}
+#image_circle {
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
 }
 
-label[for=formulaire_num]{
-    grid-column: 1/2;
-    grid-row: 4/5;
-    align-self: end;
-}
-input[name=num]{
-    grid-column: 1/3;
-    grid-row: 5/6;
+#seal{
+    width: 150px;
+    height: 250px;
+    
 }
 
-label[for=formulaire_mail]{
-    grid-column:4/5 ;
-    grid-row: 4/5;
-    align-self: end;
+/*Design Responsif*/
+    /*Grand mobile & Tablette*/
+@media only screen and (max-width: 800px){
+    .title_team{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .block1{
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 20px;
+    }
+    .block2{
+        grid-column: 1;
+        grid-row: 3;
+    }
+    #seal{
+        display: none;
+    }
+    .block3{
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .block4{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .team{
+        display: grid;
+        width: 50%;
+        margin: auto;
+        grid-gap: 1em;
+    }
+    h1{
+        text-align: center;
+        margin: auto;
+    }
+}
+    /*Petit mobile / montre */
+@media only screen and (max-width: 540px){
+    .team{
+        width: 75%;
+    }
 }
 
-input[name=mail]{
-    grid-column: 4/6;
-    grid-row: 5/6;
-}
-
-label[for=formulaire_message]{
-    grid-column: 1/2;
-    grid-row: 6/7;
-    align-self: end;
-}
-
-textarea[name=message]{
-    grid-column: 1/6;
-    grid-row: 7/8;
-}
-
-#formulaire_btn {
-    grid-column: 3/4;
-    grid-row: 9/10;
-}
+/*Fin présentation Team*/
