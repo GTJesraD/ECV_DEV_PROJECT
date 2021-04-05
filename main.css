@@ -34,7 +34,7 @@ h1, h2, h3 {
 /* Ici commence le css lié au nav */
 
 nav {
-    position: fixed;
+    position: sticky;
     width: 100%;
     display: flex;
     flex-direction: row;
