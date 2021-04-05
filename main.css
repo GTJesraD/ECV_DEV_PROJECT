@@ -6,6 +6,7 @@
     --clr-txt: #fff;
     --ft-title: ;
     --ft-txt: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 * {
@@ -31,10 +32,11 @@ h1, h2, h3 {
     outline: none;
 }
 
-/* Ici commence le css lié au nav */
+/* Menu de navigation */
 
 nav {
     position: sticky;
+    z-index: 3;
     top: 0;
     width: 100%;
     display: flex;
@@ -84,17 +86,15 @@ nav ul a:hover, nav ul a:focus {
     width: 100%;
     height: 100%;
     position: relative;
-    animation: animateright 0.8s
+    animation: animateright 2s;
 }
 
 @keyframes animateright {
     from {
         right: -100vw;
-        /* opacity: 0 */
     }
     to {
         right: 0;
-        /* opacity: 1 */
     }
 }
 
@@ -172,7 +172,7 @@ footer img {
     cursor: pointer;
 }
 
-#newsletter-submit:hover, #newsletter-submit:focus, #newsletter-submit:active {
+#newsletter-submit:hover, #newsletter-submit:focus {
     transform: scale(0.9, 0.9);
 }
 
@@ -199,8 +199,6 @@ footer img {
     margin-right: 1rem;
     transition: transform 150ms ease;
 }
-
-/* Test logo github */
 
 .social-media li img:hover, .social-media li img:focus {
     transform: scale(1.2, 1.2);
@@ -355,7 +353,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
 
 @media print {}
 
-/*Début partie Team*/
+/* Equipe */
 
 #img1, #img2, #img3, #img4 {
     display: flex;
@@ -366,10 +364,11 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
 
 li p {
     text-align: center;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-h1 {
+.title_team h2 {
     display: flex;
     text-align: center;
     margin-bottom: 30px;
@@ -379,7 +378,7 @@ h1 {
 
 .team {
     display: grid;
-    width: 50%;
+    width: 60%;
     margin: auto;
 }
 
@@ -396,18 +395,17 @@ li {
 .block1, .block2, .block3, .block4 {
     padding-top: 10px;
     padding-bottom: 10px;
+    border: 2px solid #BBE2F2;
 }
 
 .block1 {
     grid-column: 1;
     grid-row: 2;
-    border: 1px solid #BBE2F2;
 }
 
 .block2 {
     grid-column: 3;
     grid-row: 2;
-    border: 1px solid #BBE2F2;
 }
 
 .logo {
@@ -419,16 +417,14 @@ li {
 .block3 {
     grid-column: 1;
     grid-row: 4;
-    border: 1px solid #BBE2F2;
 }
 
 .block4 {
     grid-column: 3;
     grid-row: 4;
-    border: 1px solid #BBE2F2;
 }
 
-#image_circle {
+.image_circle {
     overflow: hidden;
     width: 150px;
     height: 150px;
@@ -472,11 +468,11 @@ li {
     }
     .team {
         display: grid;
-        width: 50%;
+        width: 40%;
         margin: auto;
         grid-gap: 1em;
     }
-    h1 {
+    .title_team h2 {
         text-align: center;
         margin: auto;
     }
@@ -486,11 +482,11 @@ li {
 
 @media only screen and (max-width: 540px) {
     .team {
-        width: 75%;
+        width: 55%;
     }
 }
 
-/* Formulaire */
+/* Formulaire de contact */
 
 .bloc_formulaire {
     display: flex;
@@ -567,6 +563,182 @@ textarea[name=message] {
     grid-row: 9/10;
 }
 
-/* Fin formulaire */
+/* Grille tarifaire */
 
-/*Fin présentation Team*/
+.bloc_tarif_h2 {
+    margin: 5%;
+    font-size: 32px;
+}
+
+.tarif_contenant {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div[class*=tarif_content_bloc] {
+    background-color: white;
+    flex: 0 1.5 400px;
+    margin: 20px;
+    padding-bottom: 2%;
+}
+
+.tarif_1 {
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.tarif_1_titre {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 5%;
+}
+
+.tarif_img_1 {
+    height: 80px;
+    width: 80px;
+    float: left;
+    margin: 2%;
+    margin-right: 5%;
+    position: relative;
+    top: 10px;
+}
+
+.tarif_1_contenu {
+    line-height: 1.4;
+    padding: 5%;
+    padding-right: 0;
+}
+
+.tarif_1_price {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+img[class*="tarif_mark"] {
+    height: 25px;
+    width: 25px;
+}
+
+.tarif_list {
+    max-height: 100%;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.tarif_list li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tarif_mark {
+    display: flex;
+    flex-direction: column;
+}
+
+.tarif_content_bloc1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tarif_btn_1 {
+    margin-top: 5%;
+    background: var(--clr-acc);
+    border: none;
+    padding: .5rem 1.5rem;
+    color: #000;
+    font-size: .9rem;
+    transition: transform 250ms ease;
+    cursor: pointer;
+}
+
+#tarif_btn_1:hover, #tarif_btn_1:focus {
+    transform: scale(0.9, 0.9);
+}
+
+/*Début contenuebis */
+
+.contenubis h2 {
+    color: #BBE2F2;
+    font-size: 2em;
+}
+
+.contenubis {
+    display: grid;
+    width: 60%;
+    margin: auto;
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#img-1, #img-2, #img-3 {
+    width: 150px;
+    height: 150px;
+    align-self: center;
+    margin: auto;
+}
+
+#img-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#img-2 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#img-3 {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.part1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.part2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.part3 {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.barre, .barre1, .barre2 {
+    background-color: #BBE2F2;
+    width: 5px;
+    margin-right: 20px;
+    height: 100%;
+    align-self: center;
+}
+
+.barre {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.barre1 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.barre2 {
+    grid-column: 2;
+    grid-row: 3;
+}
