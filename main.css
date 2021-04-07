@@ -39,34 +39,50 @@ nav {
     z-index: 3;
     top: 0;
     width: 100%;
+    /* height: 80px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #AFC5F0;
+    padding: .6rem;
+    align-items: center;
+    background-color: var(--clr-bg);
+    color: var(--clr-txt);
 }
 
 nav li {
-    width: 20%;
+    color: var(--clr-txt);
+    margin: 0 1rem;
 }
 
 nav ul {
-    width: 80%;
-    list-style-type: none;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-nav ul a {
-    text-decoration: none;
-    color: black;
-    padding: 0 5%;
+nav a {
+    position: relative;
+    color: var(--clr-txt);
 }
 
-nav ul a:hover, nav ul a:focus {
-    color: white;
-    border-bottom: 2px solid gold;
+nav ul a:not(.logo, .lang-button)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1.5px;
+    background: var(--clr-txt);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 250ms ease-in;
+}
+
+nav ul a:hover::after, nav ul a:focus::after {
+    transform: scaleX(1);
     outline: none;
 }
 
@@ -74,17 +90,48 @@ nav ul a:hover, nav ul a:focus {
     margin: 10px;
 }
 
+@media screen and (max-width: 700px) {
+    nav ul li {
+        margin: 1rem;
+    }
+    nav>span {
+        visibility: hidden;
+    }
+    .lang-button {
+        visibility: visible;
+    }
+}
+
 /* Slideshow */
 
 #slideshow {
     width: 100%;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 73.2px);
+}
+
+#slideshow button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 90%;
+    left: calc(50% - 7.5rem);
+    background: var(--clr-acc);
+    border: none;
+    transition: transform 250ms ease;
+    cursor: pointer;
+}
+
+#slideshow button:hover, #slideshow button:focus {
+    transform: scale(.9, .9);
 }
 
 .slideshow-img {
     display: none;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
     position: relative;
     animation: animateright 2s;
 }
