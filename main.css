@@ -423,7 +423,7 @@ li p {
     font-size: 2em;
 }
 
-.team {
+#team {
     display: grid;
     width: 60%;
     margin: auto;
@@ -479,6 +479,14 @@ li {
     border-radius: 50%;
 }
 
+.image_circle+ul li a img {
+    transition: transform 250ms ease;
+}
+
+.image_circle+ul li a img:hover, .image_circle+ul li a img:focus {
+    transform: scale(1.2, 1.2);
+}
+
 #seal {
     width: 150px;
     height: 250px;
@@ -513,7 +521,7 @@ li {
         grid-column: 1;
         grid-row: 5;
     }
-    .team {
+    #team {
         display: grid;
         width: 40%;
         margin: auto;
@@ -528,7 +536,7 @@ li {
 /*Petit mobile / montre */
 
 @media only screen and (max-width: 540px) {
-    .team {
+    #team {
         width: 55%;
     }
 }
