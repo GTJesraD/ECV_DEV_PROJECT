@@ -57,6 +57,10 @@ nav {
     color: var(--clr-txt);
 }
 
+.menu_burger {
+    display: none;
+}
+
 nav li {
     color: var(--clr-txt);
     margin: 0 1rem;
@@ -99,14 +103,17 @@ nav ul a:hover::after, nav ul a:focus::after {
 }
 
 @media screen and (max-width: 800px) {
-    .menu_burger{
-        width: 35px;
+    .menu_burger {
+        min-width: 35px;
         height: 40px;
         cursor: pointer;
         position: relative;
-
+        display: block;
     }
-    .menu_burger span{
+    nav ul {
+        display: none;
+    }
+    .menu_burger span {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -117,8 +124,7 @@ nav ul a:hover::after, nav ul a:focus::after {
         border-radius: 4px;
         transition: background-color 0.5s ease-in-out;
     }
-
-    .menu_burger span:before, .menu_burger span:after{
+    .menu_burger span:before, .menu_burger span:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -127,51 +133,20 @@ nav ul a:hover::after, nav ul a:focus::after {
         border-radius: 4px;
         transition: transform 0.5s ease-in-out;
     }
-
-    .menu_burger span:before{
+    .menu_burger span:before {
         transform: translateY(-10px);
     }
-
-    .menu_burger span:after{
+    .menu_burger span:after {
         transform: translateY(10px);
     }
-
-    .menu_burger.active span{
+    .menu_burger.active span {
         background-color: transparent;
     }
-
-    .menu_burger.active span:before{
+    .menu_burger.active span:before {
         transform: translateY(0px) rotateZ(45deg);
     }
-
-    .menu_burger.active span:after{
+    .menu_burger.active span:after {
         transform: translateY(0px) rotateZ(-45deg);
-    }
-
-    .menu_burger.active .menu_content{
-        visibility: visible;
-        background-color: black;
-        width: 500px;
-        height: 500px;
-    }
-
-    nav .logo {
-        display: none;
-    }
-    nav>span {
-        opacity: 0;
-    }
-
-    nav > ul {
-        visibility: hidden;
-    }
-
-    nav > li {
-        visibility: hidden;
-    }
-
-    .lang-button {
-        opacity: 1;
     }
 }
 
@@ -830,7 +805,7 @@ div[class*=tarif_content_bloc] {
     position: relative;
 }
 
-.tarif_1_titre, .tarif_2_titre,.tarif_3_titre {
+.tarif_1_titre, .tarif_2_titre, .tarif_3_titre {
     font-size: 28px;
     text-align: center;
     font-weight: bold;
@@ -853,7 +828,7 @@ div[class*=tarif_content_bloc] {
     padding-right: 0;
 }
 
-.tarif_1_price, .tarif_2_price,.tarif_3_price {
+.tarif_1_price, .tarif_2_price, .tarif_3_price {
     text-align: center;
     font-size: 20px;
     width: 200px;
@@ -861,7 +836,6 @@ div[class*=tarif_content_bloc] {
     position: absolute;
     bottom: 5%;
     left: calc(50% - 100px);
-
 }
 
 img[class*="tarif_mark"] {
@@ -991,61 +965,48 @@ img[class*="tarif_mark"] {
 /*Contenu-bis responsif*/
 
 @media only screen and (max-width: 800px) {
-
     .contenubis {
-    display: grid;
-    width: 60%;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+        display: grid;
+        width: 60%;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
-
     .contenubis h2 {
         text-align: center;
         font-size: 1.5em;
     }
-
-    .contenubis p{
+    .contenubis p {
         text-align: center;
     }
-
-    #img-1, #img-2, #img-3{
+    #img-1, #img-2, #img-3 {
         margin-top: 10px;
     }
-
-    #img-1{
+    #img-1 {
         grid-column: 1;
         grid-row: 1;
     }
-
-    .part1{
+    .part1 {
         grid-column: 1;
         grid-row: 2;
     }
-
-    #img-2{
+    #img-2 {
         grid-column: 1;
         grid-row: 3;
     }
-
-    .part2{
+    .part2 {
         grid-column: 1;
         grid-row: 4;
     }
-
-    #img-3{
+    #img-3 {
         grid-column: 1;
         grid-row: 5;
     }
-
-    .part3{
+    .part3 {
         grid-column: 1;
         grid-row: 6;
     }
-
-    .barre, .barre1, .barre2{
+    .barre, .barre1, .barre2 {
         display: none;
     }
-
-    
 }

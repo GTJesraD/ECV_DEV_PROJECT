@@ -20,8 +20,37 @@ function carousel() {
 
 // Code pour le menu burger
 
-const menu_burger = document.querySelector('.menu_burger');
+/* const menu_burger = document.querySelector('.menu_burger');
+const menu_content = document.querySelector('.menu_content');
 
-menu_burger.addEventListener('click', () =>{
+menu_burger.addEventListener('click', () => {
     menu_burger.classList.toggle('active');
+
+    if (menu_content.style.display === "flex" && menu_burger.classList.contains('active')) {
+        menu_content.style.display = "none";
+    }
+    else {
+        menu_content.style.display = "flex";
+    }
+    console.log(menu_burger.classList.contains('active'))
+
+}); */
+
+const bouton = document.querySelector('.menu_burger');
+const contenu = document.querySelector('nav ul');
+
+bouton.addEventListener('click', () => {
+    bouton.classList.toggle('active');
+
+
+    if (contenu.style.display === 'flex') {
+        if (bouton.classList.contains('active')) {
+            contenu.style.display = 'none';
+        }
+    } else {
+        if (!bouton.classList.contains('active')) {
+            console.log('test')
+            contenu.style.display = 'flex';
+        }
+    }
 });
