@@ -427,7 +427,7 @@ footer img {
     padding: 1rem 0;
 }
 
-.bottom-section div {
+.bottom-section>ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -443,7 +443,7 @@ footer img {
     text-align: center;
 }
 
-.bottom-section>li {
+.bottom-section .center {
     width: 20%;
 }
 
@@ -519,7 +519,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
     .bottom-section>* {
         width: calc(100% / 3);
     }
-    .bottom-section div {
+    .bottom-section ul:not(.center) {
         flex-direction: column;
     }
     .bottom-section li {
