@@ -1,6 +1,8 @@
 // Code pour le slideshow
 
 var slideIndex = 0;
+
+// On appelle la fonction afin quue le slideshow se lance dès l'entrée sur le site
 carousel();
 
 function carousel() {
@@ -12,5 +14,6 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) { slideIndex = 1 }
     x[slideIndex - 1].style.display = "block";
-    setTimeout(carousel, 4000);
+    // Change d'image toute les 6 secondes
+    setTimeout(carousel, 7000);
 }

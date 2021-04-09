@@ -31,23 +31,27 @@
 
 <body>
     <nav>
-        <a id="logo" href="#"><img src="ressources/img/logo/icon_pas_detoure.svg" alt="Logo de Seal Agency" height="50"
-                width="50"></a>
+        <a class="logo" href="#">
+            <img src="ressources/img/logo/icon_pas_detoure.svg" alt="Logo de Seal Agency" height="50" width="50">
+        </a>
         <ul>
             <li>
-                <a href="#">Notre equipe</a>
+                <a href="#team">Notre equipe</a>
             </li>
             <li>
-                <a href="#">Notre offre</a>
+                <a href="#tarif">Notre offre</a>
             </li>
             <li>
                 <a href="#">Nouveautés</a>
             </li>
             <li>
-                <a href="#">Nous contacter</a>
+                <a href="#formulaire">Nous contacter</a>
             </li>
         </ul>
-        <a href="#">FR/EN</a>
+        <span>
+            <a class="lang-button" href="#">Fr</a> /
+            <a class="lang-button" href="#">En</a>
+        </span>
     </nav>
 
     <div id="slideshow">
@@ -55,69 +59,123 @@
         <img src="ressources/img/slideshow/img2.jpg" alt="Image 2 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img3.jpg" alt="Image 3 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img4.jpg" alt="Image 4 du slideshow" class="slideshow-img">
-    </div>
 
-    <!--PARTIE QUENTIN-->
-    <div class="presentation"> <!--pas oublier fermer le div-->
-        <div class="title_presentation">
-            <h1>Présentation</h1>
-        </div>
-        <br>
-        <div class="subtitle_presentation">
-            <h2>Sous-titre à définir</h2>
-        </div>
-        <br>
-        <div class="presentation1"> <!--pas oublier fermer le div-->
-            <div class="text_presentation1">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-            </div>
-            <br>
-            <div class="img_presentation1">
-                <img id="img_pres1" src="#">
-            </div>
-            <br>
-                <hr>
-            <br>
-        </div>
-        <div class="presentation2"> <!--pas oublier fermer le div-->
-            <div class="img_presentation2">
-                <img id="img_pres2" src="#">
-            </div>
-            <br>
-            <div class="text_presentation2">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-            </div>
-            <br>
-                <hr>
-            <br>
-        </div>
-        <div class="presentation3"> <!--pas oublier fermer le div-->
-            <div class="text_presentation3">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </p>
-            </div>
-            <br>
-            <div class="img_presentation3">
-                <img id="img_pres3" src="#">
-            </div>
-            <br>
-        </div>
-        <div class="button">
-            <button name="button">Le bouton</button>
-        </div>
+        <button>Nous découvrir</button>
     </div>
-       
-
+    <div>
+        <!--PARTIE QUENTIN-->
+        <div class="presentation">
+            <!--pas oublier fermer le div-->
+            <div class="title_presentation">
+                <h1>Présentation</h1>
+            </div>
+            <br>
+            <div class="subtitle_presentation">
+                <h2>Sous-titre à définir</h2>
+            </div>
+            <br>
+            <div class="presentation1">
+                <!--pas oublier fermer le div-->
+                <div class="text_presentation1">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <br>
+                <div class="img_presentation1">
+                    <img id="img_pres1" src="#">
+                </div>
+                <br>
+                <hr>
+                <br>
+            </div>
+            <div class="presentation2">
+                <!--pas oublier fermer le div-->
+                <div class="img_presentation2">
+                    <img id="img_pres2" src="#">
+                </div>
+                <br>
+                <div class="text_presentation2">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <br>
+                <hr>
+                <br>
+            </div>
+            <div class="presentation3">
+                <!--pas oublier fermer le div-->
+                <div class="text_presentation3">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+                <br>
+                <div class="img_presentation3">
+                    <img id="img_pres3" src="#">
+                </div>
+                <br>
+            </div>
+            <div class="button">
+                <button name="button">Le bouton</button>
+            </div>
+        </div>
 
         <!--FIN PARTIE QUENTIN-->
 
+    </div>
+    <div id="tarif" class="bloc_tarif">
+
+        <h2 class="bloc_tarif_h2">Les tarifs</h2>
+
+        <div class="tarif_contenant">
+
+            <div class="tarif_content_bloc1">
+                <div class="tarif_1">
+                    <p class="tarif_1_titre">Classique</p>
+                    <img src="ressources/img/web-programming.svg" alt="Image de developpement" class="tarif_img_1">
+                    <p class="tarif_1_contenu">Cette offre consiste en la creation de votre site sur devis. Nous
+                        respecterons votre demande a la
+                        lettre et notre equipe de developpement se chargera de tout mettre en oeuvre pour qu'il vous
+                        convienne au mieux.</p>
+                    <p class="tarif_1_price">800 - 1200 €</p>
+                </div>
+                <ul class="tarif_list">
+                    <li><span>Lorem ipsum dolor sit amet</span><img src="ressources\img\tick.svg" alt="Mark correct 1"
+                            class="tarif_mark_1"></li>
+                    <li><span>Lorem ipsum dolor sit sit amet</span><img src="ressources\img\tick.svg"
+                            alt="Mark correct 2" class="tarif_mark_1"></li>
+                    <li><span>Lorem ipsum sit amet, consectetur</span><img src="ressources\img\tick.svg"
+                            alt="Mark correct 3" class="tarif_mark_1"></li>
+                    <li><span>Lorem ipsum dolor sit amet</span><img src="ressources\img\cancel.svg"
+                            alt="Mark incorrect 1" class="tarif_mark_2"></li>
+                    <li><span>Lorem ipsum dolor sit amet, am</span><img src="ressources\img\cancel.svg"
+                            alt="Mark incorrect 2" class="tarif_mark_2"></li>
+                    <li><span>Lorem dolor sit amet, to</span> <img src="ressources\img\cancel.svg"
+                            alt="Mark incorrect 3" class="tarif_mark_2"></li>
+                </ul>
+
+                <button type="submit" name="selectionner" id="tarif_btn_1">Selectionner</button>
+            </div>
+            <div class="tarif_content_bloc2">
+
+            </div>
+            <div class="tarif_content_bloc3">
+
+            </div>
+        </div>
+    </div>
+
     <div>3</div>
-    <div class="team">
+
+    <div id="team">
         <div class="title_team">
             <h2>L'équipe de "TheSealAgency"</h2>
         </div>
@@ -130,10 +188,14 @@
                     <p>Ruben Balloux</p>
                 </li>
                 <li>
-                    <p>Rôle: </p>
+                    <p>Fondateur</p>
                 </li>
                 <li>
-                    <p>Réseaux sociaux:</p>
+                    <p>
+                        <a href="#"><img src="ressources/img/twitter.svg" width="30" alt="Logo twitter"></a>
+                        <a href="#"><img src="ressources/img/facebook.svg" width="30" alt="Logo Facebook"></a>
+                        <a href="#"><img src="ressources/img/github.svg" width="30" alt="Logo GitHub"></a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -143,13 +205,17 @@
             </div>
             <ul>
                 <li>
-                    <p>Yaakov Ferechteh Far </p>
+                    <p>Baptiste Dhelias</p>
                 </li>
                 <li>
-                    <p>Rôle: </p>
+                    <p>Co-Fondateur</p>
                 </li>
                 <li>
-                    <p>Réseaux sociaux: </p>
+                    <p>
+                        <a href="#"><img src="ressources/img/twitter.svg" width="30" alt="Logo twitter"></a>
+                        <a href="#"><img src="ressources/img/facebook.svg" width="30" alt="Logo Facebook"></a>
+                        <a href="#"><img src="ressources/img/github.svg" width="30" alt="Logo GitHub"></a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -162,10 +228,14 @@
                     <p>Quentin Moutinard </p>
                 </li>
                 <li>
-                    <p>Rôle: </p>
+                    <p>Web Designer</p>
                 </li>
                 <li>
-                    <p>Réseaux sociaux:</p>
+                    <p>
+                        <a href="#"><img src="ressources/img/twitter.svg" width="30" alt="Logo twitter"></a>
+                        <a href="#"><img src="ressources/img/facebook.svg" width="30" alt="Logo Facebook"></a>
+                        <a href="#"><img src="ressources/img/github.svg" width="30" alt="Logo GitHub"></a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -175,13 +245,17 @@
             </div>
             <ul>
                 <li>
-                    <p>Baptiste Dhelias</p>
+                    <p>Yaakov Ferechteh Far </p>
                 </li>
                 <li>
-                    <p>Rôle: </p>
+                    <p>Développeur Web</p>
                 </li>
                 <li>
-                    <p>Réseaux sociaux: </p>
+                    <p>
+                        <a href="#"><img src="ressources/img/twitter.svg" width="30" alt="Logo twitter"></a>
+                        <a href="#"><img src="ressources/img/facebook.svg" width="30" alt="Logo Facebook"></a>
+                        <a href="#"><img src="ressources/img/github.svg" width="30" alt="Logo GitHub"></a>
+                    </p>
                 </li>
             </ul>
         </div>
@@ -195,23 +269,35 @@
         <img id="img-1" src="ressources/img/portraits/chaton.jpeg" alt="#">
         <div class="part1">
             <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
         <img id="img-2" src="ressources/img/portraits/chaton.jpeg" alt="#">
         <div class="part2">
             <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
         <img id="img-3" src="ressources/img/portraits/chaton.jpeg" alt="#">
         <div class="part3">
             <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
-        <div class="barre"> 
+        <div class="barre">
         </div>
-        <div class="barre1"> 
+        <div class="barre1">
         </div>
-        <div class="barre2"> 
+        <div class="barre2">
         </div>
     </div>
 
