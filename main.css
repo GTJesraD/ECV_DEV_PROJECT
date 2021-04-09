@@ -140,6 +140,13 @@ nav ul a:hover::after, nav ul a:focus::after {
         transform: translateY(0px) rotateZ(-45deg);
     }
 
+    .menu_burger.active .menu_content{
+        visibility: visible;
+        background-color: black;
+        width: 500px;
+        height: 500px;
+    }
+
     nav .logo {
         display: none;
     }
