@@ -90,12 +90,13 @@ nav ul a:hover::after, nav ul a:focus::after {
     margin: 10px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .menu_burger{
-        width: 50px;
-        height: 30px;
+        width: 35px;
+        height: 40px;
         cursor: pointer;
         position: relative;
+
     }
     .menu_burger span{
         position: absolute;
@@ -116,6 +117,7 @@ nav ul a:hover::after, nav ul a:focus::after {
         height: 4px;
         background-color: white;
         border-radius: 4px;
+        transition: transform 0.5s ease-in-out;
     }
 
     .menu_burger span:before{
@@ -128,8 +130,16 @@ nav ul a:hover::after, nav ul a:focus::after {
 
     .menu_burger.active span{
         background-color: transparent;
-
     }
+
+    .menu_burger.active span:before{
+        transform: translateY(0px) rotateZ(45deg);
+    }
+
+    .menu_burger.active span:after{
+        transform: translateY(0px) rotateZ(-45deg);
+    }
+
     nav .logo {
         display: none;
     }
@@ -146,7 +156,7 @@ nav ul a:hover::after, nav ul a:focus::after {
     }
 
     .lang-button {
-        visibility: visible;
+        visibility: hidden;
     }
 }
 
