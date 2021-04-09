@@ -17,3 +17,11 @@ function carousel() {
     // Change d'image toute les 6 secondes
     setTimeout(carousel, 7000);
 }
+
+// Code pour le menu burger
+
+const menu_burger = document.querySelector('.menu_burger');
+
+menu_burger.addEventListener('click', () =>{
+    menu_burger.classList.toggle('active');
+});
