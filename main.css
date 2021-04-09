@@ -148,65 +148,63 @@ nav ul a:hover::after, nav ul a:focus::after {
 /* Presentation */
 
 .presentation {
-  display: grid;
-  grid-template-columns: repeat(12, 75px);
-  grid-template-rows: repeat(12, 75px);
-  grid-gap: 10px;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(12, 75px);
+    grid-template-rows: repeat(12, 75px);
+    grid-gap: 10px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    font-size: 15px;
 }
 
 .title_presentation {
-  grid-column-start: 7;
-  grid-column-end: 12;
-  grid-row-start: 1;
-  grid-row-end: 1;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 1;
+    grid-row-end: 1;
 }
 
 .subtitle_presentation {
-  grid-column-start: 7;
-  grid-column-end: 12;
-  grid-row-start: 2;
-  grid-row-end: 2;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
 
 .presentation1 {
-  grid-column-start: 3;
-  grid-column-end: 9;
-  grid-row-start: 3;
-  grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
 
 .text_presentation1 p {
-  grid-column-start: 3;
-  grid-column-end: 7;
-  grid-row-start: 3;
-  grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .img_presentation1 {
-  grid-column-start: 9;
-  grid-column-end: 12;
-  grid-row-start: 3;
-  grid-row-end: 4;
+    grid-column-start: 9;
+    grid-column-end: 12;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .presentation2 {
-  grid-column-start: 3;
-  grid-column-end: 9;
-  grid-row-start: 6;
-  grid-row-end: 8;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 8;
 }
 
 .presentation3 {
-  grid-column-start: 3;
-  grid-column-end: 9;
-  grid-row-start: 9;
-  grid-row-end: 12;
+    grid-column-start: 3;
+    grid-column-end: 9;
+    grid-row-start: 9;
+    grid-row-end: 12;
 }
-
-
 
 /* Footer */
 
@@ -702,20 +700,22 @@ div[class*=tarif_content_bloc] {
     padding-bottom: 2%;
 }
 
-.tarif_1 {
+.tarif_1, .tarif_2, .tarif_3 {
     border: solid black 1px;
     border-radius: 10px;
     padding: 5%;
+    min-height: 350px;
+    position: relative;
 }
 
-.tarif_1_titre {
+.tarif_1_titre, .tarif_2_titre,.tarif_3_titre {
     font-size: 28px;
     text-align: center;
     font-weight: bold;
     padding-bottom: 5%;
 }
 
-.tarif_img_1 {
+.tarif_img_1, .tarif_img_2, .tarif_img_3 {
     height: 80px;
     width: 80px;
     float: left;
@@ -725,17 +725,21 @@ div[class*=tarif_content_bloc] {
     top: 10px;
 }
 
-.tarif_1_contenu {
+.tarif_1_contenu, .tarif_2_contenu, .tarif_3_contenu {
     line-height: 1.4;
     padding: 5%;
     padding-right: 0;
 }
 
-.tarif_1_price {
+.tarif_1_price, .tarif_2_price,.tarif_3_price {
     text-align: center;
     font-size: 20px;
+    width: 200px;
     font-weight: bold;
-    margin-top: 5%;
+    position: absolute;
+    bottom: 5%;
+    left: calc(50% - 100px);
+
 }
 
 img[class*="tarif_mark"] {
@@ -763,13 +767,14 @@ img[class*="tarif_mark"] {
     flex-direction: column;
 }
 
-.tarif_content_bloc1 {
+.tarif_content_bloc1, .tarif_content_bloc2, .tarif_content_bloc3 {
+    border-radius: 10px 10px 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#tarif_btn_1 {
+#tarif_btn_1, #tarif_btn_2, #tarif_btn_3 {
     margin-top: 5%;
     background: var(--clr-acc);
     border: none;
