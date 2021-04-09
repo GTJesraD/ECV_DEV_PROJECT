@@ -40,17 +40,6 @@ const bouton = document.querySelector('.menu_burger');
 const contenu = document.querySelector('nav ul');
 
 bouton.addEventListener('click', () => {
-    bouton.classList.toggle('active');
-
-
-    if (contenu.style.display === 'flex') {
-        if (bouton.classList.contains('active')) {
-            contenu.style.display = 'none';
-        }
-    } else {
-        if (!bouton.classList.contains('active')) {
-            console.log('test')
-            contenu.style.display = 'flex';
-        }
-    }
+    bouton.classList.toggle('menu_burger_active');
+    contenu.classList.toggle('contenu_active');
 });
