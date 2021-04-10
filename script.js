@@ -38,8 +38,10 @@ menu_burger.addEventListener('click', () => {
 
 const bouton = document.querySelector('.menu_burger');
 const contenu = document.querySelector('nav ul');
+const menu_nav = document.querySelector('nav');
 
 bouton.addEventListener('click', () => {
     bouton.classList.toggle('menu_burger_active');
     contenu.classList.toggle('contenu_active');
+    menu_nav.style.alignItems = 'flex-start';
 });
