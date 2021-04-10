@@ -164,16 +164,29 @@ nav ul a:hover::after, nav ul a:focus::after {
         transform: translateY(0px) rotateZ(-45deg);
     }
     .contenu_active {
+        width: 100%;
+        height: 50vh;
         display: flex;
-        margin-top: 5rem;
         flex-direction: column;
-        transition: display 250ms ease;
+        position: fixed;
+        top: 76.2px;
+        left: 0;
+        background: var(--clr-bg);
     }
     .contenu_active li {
-        margin-bottom: 2rem;
+        margin: 1rem 0;
     }
     nav>span {
-        display: none;
+        /* display: none; */
+        font-size: 1.3rem;
+        position: relative;
+    }
+    nav ul a {
+        font-size: 1.3rem;
+    }
+    nav ul a:hover::after, nav ul a:focus::after {
+        transform: scaleX(0);
+        outline: none;
     }
 }
 
@@ -181,7 +194,7 @@ nav ul a:hover::after, nav ul a:focus::after {
 
 #slideshow {
     width: 100%;
-    height: calc(100vh - 73.2px);
+    height: calc(100vh - 76.2px);
 }
 
 #slideshow button {
