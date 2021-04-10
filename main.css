@@ -139,23 +139,6 @@ nav ul a:hover::after, nav ul a:focus::after {
     .menu_burger span:after {
         transform: translateY(10px);
     }
-    .menu_burger.active span {
-        background-color: transparent;
-    }
-    nav .logo {
-        display: none;
-    }
-    nav>span {
-        visibility: hidden;
-    }
-    nav>ul {
-        visibility: hidden;
-    }
-    nav>li {
-        visibility: hidden;
-    }
-    .lang-button {
-        visibility: visible;
     .menu_burger.menu_burger_active span {
         background-color: transparent;
     }
@@ -980,6 +963,7 @@ img[class*="tarif_mark"] {
     grid-column: 2;
     grid-row: 3;
 }
+
 
 /*Contenu-bis responsif*/
 
