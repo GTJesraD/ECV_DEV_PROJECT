@@ -54,7 +54,8 @@
             </li>
         </ul>
         <span>
-            <a class="lang-button" href="#">Fr</a>
+            <a class="lang-button" href="index.html">Fr</a> /
+
             <a class="lang-button" href="#">En</a>
         </span>
     </nav>
@@ -69,8 +70,7 @@
     </div>
     <div>
         <!--PARTIE QUENTIN-->
-        <div class="presentation">
-            <!--pas oublier fermer le div-->
+        <div class="title_pres">
             <div class="title_presentation">
                 <h1>Présentation</h1>
             </div>
@@ -78,9 +78,10 @@
             <div class="subtitle_presentation">
                 <h2>Sous-titre à définir</h2>
             </div>
+        </div>
+        <div class="presentation">
             <br>
             <div class="presentation1">
-                <!--pas oublier fermer le div-->
                 <div class="text_presentation1">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -90,16 +91,15 @@
                 </div>
                 <br>
                 <div class="img_presentation1">
-                    <img id="img_pres1" src="#">
+                    <img id="img_pres1" src="ressources/img/portraits/chaton.jpeg">
                 </div>
+                <div class="barre_pres1"></div>
                 <br>
-                <hr>
                 <br>
             </div>
             <div class="presentation2">
-                <!--pas oublier fermer le div-->
                 <div class="img_presentation2">
-                    <img id="img_pres2" src="#">
+                    <img id="img_pres2" src="ressources/img/portraits/chaton.jpeg">
                 </div>
                 <br>
                 <div class="text_presentation2">
@@ -109,12 +109,11 @@
                         laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                 </div>
+                <div class="barre_pres2"></div>
                 <br>
-                <hr>
                 <br>
             </div>
             <div class="presentation3">
-                <!--pas oublier fermer le div-->
                 <div class="text_presentation3">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -124,7 +123,7 @@
                 </div>
                 <br>
                 <div class="img_presentation3">
-                    <img id="img_pres3" src="#">
+                    <img id="img_pres3" src="ressources/img/portraits/chaton.jpeg">
                 </div>
                 <br>
             </div>
@@ -154,7 +153,7 @@
                     <p class="tarif_1_price">800 - 1200 €</p>
                 </div>
                 <ul class="tarif_list">
-                    <li><span>Developpement FrontEnd</span><img src="ressources\img\tick.svg" alt="Mark correct"
+                    <li><span>Developpement FrontEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
                             class="tarif_mark_1" width="25"></li>
                     <li><span>Developpement BackEnd</span><img src="ressources\img\tick.svg" alt="Mark correct"
                             class="tarif_mark_1" width="25"></li>
@@ -354,28 +353,42 @@
         </div>
     </div>
 
-    <div id="formulaire" class="bloc_formulaire">
-        <form method="POST" action="#">
-            <h2 class="formulaire_h2">Formulaire de contact</h2>
-            <label for="formulaire_nom">Votre nom </label>
-            <input type="text" name="nom" id="formulaire_nom">
-            <br>
-            <label for="formulaire_prenom">Votre prénom </label>
-            <input type="text" name="prenom" id="formulaire_prenom">
-            <br>
-            <label for="formulaire_num">Votre numéro de téléphone </label>
-            <input type="tel" name="num" id="formulaire_num">
-            <br>
-            <label for="formulaire_mail">Votre e-mail </label>
-            <input type="email" name="mail" id="formulaire_mail">
-            <br>
-            <label for="formulaire_message">Votre demande </label>
-            <textarea name="message" id="formulaire_message" cols="30" rows="1"
-                placeholder="Ecrivez nous ..."></textarea>
-            <br>
-            <button type="submit" name="envoyer" id="formulaire_btn">Envoyer</button>
-        </form>
-    </div>
+    <form id="formulaire" method="POST">
+        <h2>Formulaire de contact</h2>
+
+        <div>
+            <div>
+                <label for="form_nom">Votre nom<span>*</span></label>
+                <input required type="text" id="form_nom">
+
+                <label for="form_prenom">Votre prénom<span>*</span></label>
+                <input required type="text" id="form_prenom">
+            </div>
+
+            <div>
+                <label for="form_num">Num. téléphone<span>*</span></label>
+                <input required type="tel" id="form_num">
+
+                <label for="form_mail">Votre e-mail<span>*</span></label>
+                <input required type="email" id="form_mail">
+            </div>
+        </div>
+
+        <label for="form_message">Votre demande<span>*</span></label>
+        <textarea form="formulaire" required id="form_message" cols="30" rows="10"
+            placeholder="Décrivez votre demande"></textarea>
+
+        <label for="form_file">Ajouter des documents</label>
+        <input accept=".pdf,image/*" multiple type="file" id="form_file">
+
+
+        <input type="submit" value="Envoyer">
+
+        <p>
+            <em>Les champs avec <span>*</span> sont obligatoires</em>
+        </p>
+    </form>
+
     <footer>
         <!-- Liens réseaux sociaux + adresse postale -->
         <div class="top-section">
@@ -383,7 +396,7 @@
                 <h2>Informations</h2>
                 <h3>The Seal Agency</h3>
                 <p>
-                    14 rue de la suprematie de Yaakov
+                    5 place Alice Giroud
                     <br>
                     33000 Bordeaux
                 </p>
@@ -433,23 +446,26 @@
             </div>
         </div>
         <!-- Liens du bas + bouton remonter -->
-        <ul class="bottom-section">
-            <div>
+        <div class="bottom-section">
+            <ul>
                 <li><a href="#"><span>Mentions légales</span></a></li>
                 <li><a href="#"><span>Politique de confidentialité</span></a></li>
-            </div>
-            <li>
-                <a href="#menu-navigation" onclick="window.scrollTo({ top: 0, behavior: 'smooth'})"
-                    class="btn-remonter">
-                    <img width="30" src="ressources/img/up-arrow.svg" alt="Icône pour remonter">
-                </a>
-            </li>
-            <div>
+            </ul>
+            <ul class="center">
+                <li>
+                    <a href="#menu-navigation" onclick="window.scrollTo({ top: 0, behavior: 'smooth'})"
+                        class="btn-remonter">
+                        <img width="30" src="ressources/img/up-arrow.svg" alt="Icône pour remonter">
+                    </a>
+                </li>
+            </ul>
+            <ul>
                 <li><a href="#"><span>Nos CGV</span></a></li>
                 <li><a href="#"><span>Accessibilité</span></a></li>
-            </div>
-        </ul>
+            </ul>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
