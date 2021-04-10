@@ -54,7 +54,8 @@
             </li>
         </ul>
         <span>
-            <a class="lang-button" href="#">Fr</a>
+            <a class="lang-button" href="index.html">Fr</a> /
+
             <a class="lang-button" href="#">En</a>
         </span>
     </nav>
@@ -353,28 +354,41 @@
         </div>
     </div>
 
-    <div id="formulaire" class="bloc_formulaire">
-        <form method="POST" action="#">
-            <h2 class="formulaire_h2">Formulaire de contact</h2>
-            <label for="formulaire_nom">Votre nom </label>
-            <input type="text" name="nom" id="formulaire_nom">
-            <br>
-            <label for="formulaire_prenom">Votre prénom </label>
-            <input type="text" name="prenom" id="formulaire_prenom">
-            <br>
-            <label for="formulaire_num">Votre numéro de téléphone </label>
-            <input type="tel" name="num" id="formulaire_num">
-            <br>
-            <label for="formulaire_mail">Votre e-mail </label>
-            <input type="email" name="mail" id="formulaire_mail">
-            <br>
-            <label for="formulaire_message">Votre demande </label>
-            <textarea name="message" id="formulaire_message" cols="30" rows="1"
-                placeholder="Ecrivez nous ..."></textarea>
-            <br>
-            <button type="submit" name="envoyer" id="formulaire_btn">Envoyer</button>
-        </form>
-    </div>
+    <form id="formulaire" method="POST">
+        <h2>Formulaire de contact</h2>
+
+        <div>
+            <div>
+                <label for="form_nom">Votre nom<span>*</span></label>
+                <input required type="text" id="form_nom">
+
+                <label for="form_prenom">Votre prénom<span>*</span></label>
+                <input required type="text" id="form_prenom">
+            </div>
+
+            <div>
+                <label for="form_num">Num. téléphone<span>*</span></label>
+                <input required type="tel" id="form_num">
+
+                <label for="form_mail">Votre e-mail<span>*</span></label>
+                <input required type="email" id="form_mail">
+            </div>
+        </div>
+
+        <label for="form_message">Votre demande<span>*</span></label>
+        <textarea form="formulaire" required id="form_message" cols="30" rows="10"
+            placeholder="Décrivez votre demande"></textarea>
+
+        <label for="form_file">Ajouter des documents</label>
+        <input accept=".pdf,image/*" multiple type="file" id="form_file">
+
+
+        <input type="submit" value="Envoyer">
+        <em>
+            <p>Les champs avec <span>*</span> sont obligatoires</p>
+        </em>
+    </form>
+
     <footer>
         <!-- Liens réseaux sociaux + adresse postale -->
         <div class="top-section">
@@ -382,7 +396,7 @@
                 <h2>Informations</h2>
                 <h3>The Seal Agency</h3>
                 <p>
-                    14 rue de la suprematie de Yaakov
+                    5 place Alice Giroud
                     <br>
                     33000 Bordeaux
                 </p>
@@ -449,6 +463,7 @@
             </div>
         </ul>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
