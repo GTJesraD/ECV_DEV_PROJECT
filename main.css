@@ -165,9 +165,7 @@ nav ul a:hover::after, nav ul a:focus::after {
 }
 
 #slideshow button {
-    /* width: 15rem; */
-    /* height: 3rem; */
-    /* padding: ; */
+    width: 15rem;
     font-size: 1.2rem;
     position: absolute;
     top: 90%;
@@ -212,7 +210,6 @@ nav ul a:hover::after, nav ul a:focus::after {
     margin-top: 50px;
     font-size: 15px;
 }
-
 
 #img_pres1, #img_pres2, #img_pres3 {
     width: 150px;
@@ -304,33 +301,18 @@ nav ul a:hover::after, nav ul a:focus::after {
     grid-row-end: 4;
 }
 
-.button_pres button {
-    width: 15rem;
-    height: 3rem;
-    font-size: 1.2rem;
-    position: absolute;
-    left: calc(50% - 7.5rem);
-    background: var(--clr-acc);
-    border: none;
-    transition: transform 250ms ease;
-    cursor: pointer;
-    margin-bottom: 50px;
-}
-
 @media only screen and (max-width: 1300px) {
-.presentation1 {
-    display: block;
-    margin-bottom: 20px;
+    .presentation1 {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .presentation2 {
+        display: block;
+    }
+    .presentation3 {
+        display: block;
+    }
 }
-.presentation2 {  
-    display: block;
-}
-
-.presentation3 {
-    display: block;
-}
-
-}    
 
 /* Footer */
 
@@ -542,7 +524,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
         text-align: left;
         width: 100%;
     }
-    .bottom-section>*:nth-child(2) {
+    .bottom-section .center li {
         align-self: center;
         text-align: center;
         transform: scale(1.7, 1.7);
@@ -591,12 +573,11 @@ li p {
     margin-bottom: 10px;
 }
 
-.title_team h2 {
-    display: flex;
+#team h2 {
     text-align: center;
     margin-bottom: 30px;
     color: #BBE2F2;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #team {
@@ -713,7 +694,7 @@ li {
 
 @media only screen and (max-width: 540px) {
     #team {
-        width: 55%;
+        width: 100%;
     }
 }
 
@@ -850,12 +831,12 @@ div[class*=tarif_content_bloc]:hover {
 .tarif_1_price, .tarif_2_price, .tarif_3_price {
     text-align: center;
     font-size: 2rem;
-    width: 220px;
+    width: 240px;
     font-weight: bold;
     color: var(--clr-bg);
     position: absolute;
     bottom: 5%;
-    left: calc(50% - 110px);
+    left: calc(50% - 120px);
 }
 
 img[class*="tarif_mark"] {
@@ -908,7 +889,6 @@ img[class*="tarif_mark"] {
     grid-gap: 15px;
     grid-row-gap: 30px;
     background: #BBE2F2;
-    /* color: #000; */
 }
 
 #img-1, #img-2, #img-3 {
