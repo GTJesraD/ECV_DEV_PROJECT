@@ -6,7 +6,7 @@
     --clr-txt: #fff;
     --ft-title: 'Open Sans', sans-serif;
     --ft-txt: 'Montserrat', sans-serif;
-    overflow-x: hidden;
+    line-height: 1.6;
 }
 
 * {
@@ -18,8 +18,19 @@
     font-family: var(--ft-txt);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h1, h2, h3 {
     font-family: var(--ft-title);
+    color: var(--clr-bg) !important;
+}
+
+h1 {
+    margin-top: 5rem;
+    font-size: 4rem;
+    text-align: center;
 }
 
 .btn-perso {
@@ -55,8 +66,8 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .6rem;
     align-items: center;
+    padding: .6rem;
     background-color: var(--clr-bg);
     color: var(--clr-txt);
 }
@@ -154,6 +165,15 @@ nav ul a:hover::after, nav ul a:focus::after {
     }
     .contenu_active {
         display: flex;
+        margin-top: 5rem;
+        flex-direction: column;
+        transition: display 250ms ease;
+    }
+    .contenu_active li {
+        margin-bottom: 2rem;
+    }
+    nav>span {
+        display: none;
     }
 }
 
@@ -193,125 +213,58 @@ nav ul a:hover::after, nav ul a:focus::after {
 
 /* Presentation */
 
-.title_pres h1 {
-    text-align: center;
-    margin-top: 50px;
+#presentation {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+    align-items: center;
 }
 
-.title_pres h2 {
-    text-align: center;
-    margin-top: 30px;
+#presentation h2 {
+    font-size: 3rem;
 }
 
-.presentation {
-    margin: auto;
-    width: 60%;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    font-size: 15px;
+.pres_article {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
 }
 
-#img_pres1, #img_pres2, #img_pres3 {
-    width: 150px;
-    height: 150px;
-    align-self: center;
-    margin: auto;
+.pres_article:nth-child(2n+1) {
+    flex-direction: row-reverse;
+    margin: 5rem 0;
+    transform: translateY(-7rem);
+    z-index: 2;
 }
 
-.barre_pres1, .barre_pres2 {
-    background-color: #BBE2F2;
-    width: 100%;
-    height: 5px;
-    margin-right: 20px;
-    align-self: center;
+.pres_article:first-of-type {
+    margin-top: 5rem;
 }
 
-.presentation1 {
-    display: grid;
-    grid-template-columns: repeat(16, 60px);
-    grid-template-rows: repeat(3, 75px);
-    margin-bottom: 20px;
+.pres_article:last-of-type {
+    transform: translateY(-14rem);
 }
 
-.text_presentation1 {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 2;
-    grid-row-end: 4;
+.pres_article p {
+    width: 55%;
 }
 
-.img_presentation1 {
-    grid-column-start: 14;
-    grid-column-end: 16;
-    grid-row-start: 1;
-    grid-row-end: 4;
+.pres_article img {
+    width: 40%;
 }
 
-.barre_pres1 {
-    grid-column-start: 4;
-    grid-column-end: 16;
-    grid-row-start: 4;
-    grid-row-end: 4;
+#CTA button {
+    width: 15rem;
+    font-size: 1.2rem;
 }
 
-.presentation2 {
-    display: grid;
-    grid-template-columns: repeat(16, 60px);
-    grid-template-rows: repeat(4, 75px);
-}
-
-.text_presentation2 {
-    grid-column-start: 5;
-    grid-column-end: 16;
-    grid-row-start: 3;
-    grid-row-end: 3;
-}
-
-.img_presentation2 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.barre_pres2 {
-    grid-column-start: 4;
-    grid-column-end: 16;
-    grid-row-start: 5;
-    grid-row-end: 5;
-}
-
-.presentation3 {
-    display: grid;
-    grid-template-columns: repeat(16, 60px);
-    grid-template-rows: repeat(3, 75px);
-}
-
-.text_presentation3 {
-    grid-column-start: 1;
-    grid-column-end: 13;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-
-.img_presentation3 {
-    grid-column-start: 14;
-    grid-column-end: 20;
-    grid-row-start: 2;
-    grid-row-end: 4;
-}
-
-@media only screen and (max-width: 1300px) {
-    .presentation1 {
-        display: block;
-        margin-bottom: 20px;
-    }
-    .presentation2 {
-        display: block;
-    }
-    .presentation3 {
-        display: block;
-    }
+#CTA {
+    transform: translateY(-7rem);
+    display: flex;
+    justify-content: center;
 }
 
 /* Footer */
@@ -339,8 +292,9 @@ footer img {
     height: 13rem;
 }
 
-.top-section h2 {
+.top-section h2, .top-section h3 {
     margin-bottom: 1rem;
+    color: #fff !important;
 }
 
 /* Informations */
@@ -532,6 +486,9 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
     .infos-footer, .social-media {
         width: 50%;
     }
+    .social-media ul li {
+        margin-bottom: 1.3rem;
+    }
     .top-section {
         padding: 0;
     }
@@ -560,7 +517,7 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
 
 /* Equipe */
 
-#img1, #img2, #img3, #img4 {
+.image_team {
     display: flex;
     width: 150px;
     height: 150px;
@@ -575,31 +532,44 @@ li p {
 
 #team h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
     color: #BBE2F2;
     font-size: 3em;
+    text-align: center;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 #team {
     display: grid;
     width: 60%;
-    margin: auto;
+    margin: 9rem auto;
+}
+
+#team ul li {
+    margin-top: 1rem;
+}
+
+#team ul p {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#team ul p a {
+    margin: 0 .4rem;
 }
 
 li {
     list-style: none;
 }
 
-.title_team {
-    text-align: center;
-    grid-column: 2;
-    grid-row: 1;
-}
-
 .block1, .block2, .block3, .block4 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 2px solid #BBE2F2;
+    padding: 1rem 0;
+    background: #bbe2f2;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(202, 202, 202);
 }
 
 .block1 {
@@ -612,10 +582,11 @@ li {
     grid-row: 2;
 }
 
-.logo {
+#seal {
     grid-column: 2;
     grid-row: 3;
     text-align: center;
+    justify-self: center;
 }
 
 .block3 {
@@ -636,11 +607,11 @@ li {
     border-radius: 50%;
 }
 
-.image_circle+ul li a img {
+.image_team+ul li a img {
     transition: transform 250ms ease;
 }
 
-.image_circle+ul li a img:hover, .image_circle+ul li a img:focus {
+.image_team+ul li a img:hover, .image_team+ul li a img:focus {
     transform: scale(1.2, 1.2);
 }
 
@@ -658,7 +629,7 @@ li {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0;
+        margin: 5rem 0;
         width: 100%;
     }
     .block1, .block2, .block3, .block4 {
@@ -667,14 +638,22 @@ li {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background: none;
+        box-shadow: none;
+    }
+    #team ul li p a {
+        transform: scale(1.2, 1.2);
     }
     .image_team {
         margin: 0;
-        width: 250px;
-        height: 250px;
+        width: 210px;
+        height: 210px;
     }
     #seal {
         display: none;
+    }
+    .image_team+ul li a img:hover, .image_team+ul li a img:focus {
+        transform: scale(1, 1);
     }
 }
 
@@ -684,7 +663,7 @@ li {
     display: flex;
     flex-direction: column;
     width: 40%;
-    margin: 1rem auto;
+    margin: 9rem auto;
 }
 
 #formulaire h2 {
@@ -720,6 +699,11 @@ li {
     margin: 1rem auto !important;
 }
 
+#formulaire input[type="submit"]+p {
+    margin-top: 1rem;
+    font-size: .88rem;
+}
+
 #formulaire span {
     color: red;
 }
@@ -733,6 +717,7 @@ textarea {
 @media screen and (max-width: 1300px) {
     #formulaire {
         width: 90%;
+        margin: 5rem auto;
     }
     #formulaire>div {
         flex-direction: column;
@@ -772,7 +757,7 @@ div[class*=tarif_content_bloc] {
     transition: transform 250ms ease;
 }
 
-div[class*=tarif_content_bloc]:hover {
+div[class*=tarif_content_bloc]:hover, div[class*=tarif_content_bloc]:focus {
     transform: scale(1.02, 1.02);
 }
 
@@ -803,7 +788,6 @@ div[class*=tarif_content_bloc]:hover {
 }
 
 .tarif_1_contenu, .tarif_2_contenu, .tarif_3_contenu {
-    line-height: 1.4;
     padding: 5%;
     padding-right: 0;
 }
@@ -940,7 +924,7 @@ img[class*="tarif_mark"] {
         margin: 0;
         width: 100%;
     }
-    .part1, .part2, .part3 {
+    .part1, .part2 {
         padding-bottom: 15%;
     }
     #img-1, #img-3 {
@@ -955,5 +939,11 @@ img[class*="tarif_mark"] {
     }
     .contenubis h2 {
         padding-bottom: 2%;
+    }
+    div[class*=tarif_content_bloc]:hover, div[class*=tarif_content_bloc]:focus {
+        transform: scale(1, 1);
+    }
+    .btn-perso:hover, .btn-perso:focus {
+        transform: scale(1, 1);
     }
 }
