@@ -7,7 +7,9 @@
     <title>The Seal Agency</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel="stylesheet">
+
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="apple-touch-icon" sizes="57x57" href="ressources/img/logo/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="ressources/img/logo/apple-icon-60x60.png">
@@ -31,26 +33,33 @@
 
 <body>
     <nav>
+        <div class="menu_burger">
+            <span></span>
+        </div>
+
         <a class="logo" href="#">
             <img src="ressources/img/logo/icon_pas_detoure.svg" alt="Logo de Seal Agency" height="50" width="50">
         </a>
+
         <ul>
-            <li>
-                <a href="#team">Notre equipe</a>
-            </li>
             <li>
                 <a href="#tarif">Notre offre</a>
             </li>
             <li>
-                <a href="#">Nouveautés</a>
+                <a href="#team">Notre equipe</a>
+            </li>
+            <li>
+                <a href="#news">Nouveautés</a>
             </li>
             <li>
                 <a href="#formulaire">Nous contacter</a>
             </li>
         </ul>
+
         <span>
-            <a class="lang-button" href="#">Fr</a> /
-            <a class="lang-button" href="#">En</a>
+            <a class="lang-button" href="index.html">Fr</a> /
+
+            <a class="lang-button" href="index_en.html">En</a>
         </span>
     </nav>
 
@@ -60,129 +69,152 @@
         <img src="ressources/img/slideshow/img3.jpg" alt="Image 3 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img4.jpg" alt="Image 4 du slideshow" class="slideshow-img">
 
-        <button>Nous découvrir</button>
+        <button class="btn-perso">Nous découvrir</button>
     </div>
-    <div>
-        <!--PARTIE QUENTIN-->
-        <div class="presentation">
-            <!--pas oublier fermer le div-->
-            <div class="title_presentation">
-                <h1>Présentation</h1>
-            </div>
-            <br>
-            <div class="subtitle_presentation">
-                <h2>Sous-titre à définir</h2>
-            </div>
-            <br>
-            <div class="presentation1">
-                <!--pas oublier fermer le div-->
-                <div class="text_presentation1">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <br>
-                <div class="img_presentation1">
-                    <img id="img_pres1" src="#">
-                </div>
-                <br>
-                <hr>
-                <br>
-            </div>
-            <div class="presentation2">
-                <!--pas oublier fermer le div-->
-                <div class="img_presentation2">
-                    <img id="img_pres2" src="#">
-                </div>
-                <br>
-                <div class="text_presentation2">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <br>
-                <hr>
-                <br>
-            </div>
-            <div class="presentation3">
-                <!--pas oublier fermer le div-->
-                <div class="text_presentation3">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                <br>
-                <div class="img_presentation3">
-                    <img id="img_pres3" src="#">
-                </div>
-                <br>
-            </div>
-            <div class="button">
-                <button name="button">Le bouton</button>
-            </div>
+
+    <h1>The Seal Agency</h1>
+
+    <div id="presentation">
+        <h2>"On se <span><abbr title="Jeux de mots avec phoque et focaliser">phoqualise</abbr></span> sur vos besoins"
+        </h2>
+
+        <div class="pres_article">
+            <p>
+                Le Web est notre océan. Nous proposons toutes sortes de services numériques, tels que la création de
+                sites Web, des
+                intégrations, des automatisations marketing et bien plus encore. Nous ne croyons pas aux solutions
+                standard et vous
+                pouvez être sûr que tout notre travail est fait à la main. Grâce à notre diversité, nous résolvons des
+                problèmes et
+                créons des expériences numériques uniques et innovantes.
+            </p>
+
+            <img src="ressources/img/slideshow/img4.jpg" width="30" alt="">
         </div>
 
-        <!--FIN PARTIE QUENTIN-->
+        <div class="pres_article">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+
+            <img src="ressources/img/portraits/chaton.jpeg" width="30" alt="">
+        </div>
+
+        <div class="pres_article">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis
+                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint
+                occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+            </p>
+
+            <img src="ressources/img/slideshow/img3.jpg" width="30" alt="">
+        </div>
 
     </div>
-    <div id="tarif" class="bloc_tarif">
 
+    <div id="CTA">
+        <button class="btn-perso">En savoir plus</button>
+    </div>
+
+    <div id="tarif" class="bloc_tarif">
         <h2 class="bloc_tarif_h2">Les tarifs</h2>
 
         <div class="tarif_contenant">
-
             <div class="tarif_content_bloc1">
                 <div class="tarif_1">
-                    <p class="tarif_1_titre">Classique</p>
-                    <img src="ressources/img/web-programming.svg" alt="Image de developpement" class="tarif_img_1">
+                    <p class="tarif_1_titre">Basique</p>
+                    <img src="ressources/img/web-programming.svg" alt="Image de developpement" class="tarif_img_1"
+                        width="30">
                     <p class="tarif_1_contenu">Cette offre consiste en la creation de votre site sur devis. Nous
                         respecterons votre demande a la
                         lettre et notre equipe de developpement se chargera de tout mettre en oeuvre pour qu'il vous
                         convienne au mieux.</p>
                     <p class="tarif_1_price">800 - 1200 €</p>
                 </div>
+                <button type="submit" class="btn-perso" name="selectionner" id="tarif_btn_1">Selectionner</button>
                 <ul class="tarif_list">
-                    <li><span>Lorem ipsum dolor sit amet</span><img src="ressources\img\tick.svg" alt="Mark correct 1"
-                            class="tarif_mark_1"></li>
-                    <li><span>Lorem ipsum dolor sit sit amet</span><img src="ressources\img\tick.svg"
-                            alt="Mark correct 2" class="tarif_mark_1"></li>
-                    <li><span>Lorem ipsum sit amet, consectetur</span><img src="ressources\img\tick.svg"
-                            alt="Mark correct 3" class="tarif_mark_1"></li>
-                    <li><span>Lorem ipsum dolor sit amet</span><img src="ressources\img\cancel.svg"
-                            alt="Mark incorrect 1" class="tarif_mark_2"></li>
-                    <li><span>Lorem ipsum dolor sit amet, am</span><img src="ressources\img\cancel.svg"
-                            alt="Mark incorrect 2" class="tarif_mark_2"></li>
-                    <li><span>Lorem dolor sit amet, to</span> <img src="ressources\img\cancel.svg"
-                            alt="Mark incorrect 3" class="tarif_mark_2"></li>
+                    <li><span>Developpement FrontEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Developpement BackEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Creation d'un backoffice</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Design UX</span><img src="ressources/img/cancel.svg" alt="Mark incorrect"
+                            class="tarif_mark_2" width="25"></li>
+                    <li><span>Desing UI</span><img src="ressources/img/cancel.svg" alt="Mark incorrect"
+                            class="tarif_mark_2" width="25"></li>
+                    <li><span>Optimisation du referencement naturel</span> <img src="ressources/img/cancel.svg"
+                            alt="Mark incorrect" class="tarif_mark_2" width="25"></li>
                 </ul>
-
-                <button type="submit" name="selectionner" id="tarif_btn_1">Selectionner</button>
             </div>
             <div class="tarif_content_bloc2">
-
+                <div class="tarif_2">
+                    <p class="tarif_2_titre">Avancé</p>
+                    <img src="ressources/img/ux-interface.svg" alt="Image de UX" class="tarif_img_2" width="30">
+                    <p class="tarif_2_contenu">Cette offre consiste en plus de la creation de votre site sur devis. Nous
+                        vous proposerons nos services de UX/UI Designer. En vous proposant ce qui nous semble etre le
+                        plus adapter a votre demande.</p>
+                    <p class="tarif_2_price">1500 - 3500 €</p>
+                </div>
+                <button type="submit" class="btn-perso" name="selectionner" id="tarif_btn_2">Selectionner</button>
+                <ul class="tarif_list">
+                    <li><span>Developpement FrontEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Developpement BackEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Creation d'un backoffice</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Design UX</span><img src="ressources/img/tick.svg" alt="Mark incorrect"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Design UI</span><img src="ressources/img/tick.svg" alt="Mark incorrect"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Optimisation du referencement naturel</span> <img src="ressources/img/cancel.svg"
+                            alt="Mark incorrect" class="tarif_mark_2" width="25"></li>
+                </ul>
             </div>
             <div class="tarif_content_bloc3">
-
+                <div class="tarif_3">
+                    <p class="tarif_3_titre">Complet</p>
+                    <img src="ressources/img/seo.svg" alt="Image de developpement" class="tarif_img_3" width="30">
+                    <p class="tarif_3_contenu">Cette offre consiste en plus de la creation de votre site sur devis. A
+                        vous proposer nos service en SEO. Nous mettrons tout en
+                        oeuvre pour vous proposer un site qui vous plait en plus d'un referencement naturel efficace.
+                    </p>
+                    <p class="tarif_3_price">5000 - 7000 €</p>
+                </div>
+                <button type="submit" class="btn-perso" name="selectionner" id="tarif_btn_3">Selectionner</button>
+                <ul class="tarif_list">
+                    <li><span>Developpement FrontEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Developpement BackEnd</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Creation d'un backoffice</span><img src="ressources/img/tick.svg" alt="Mark correct"
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Design UX</span><img src="ressources/img/tick.svg" alt="Mark correct" class="tarif_mark_1"
+                            width="25"></li>
+                    <li><span>Design UI</span><img src="ressources/img/tick.svg" alt="Mark correct "
+                            class="tarif_mark_1" width="25"></li>
+                    <li><span>Optimisation du referencement naturel</span> <img src="ressources/img/tick.svg"
+                            alt="Mark correct " class="tarif_mark_1" width="25"></li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <div>3</div>
-
     <div id="team">
-        <div class="title_team">
-            <h2>L'équipe de "TheSealAgency"</h2>
-        </div>
+        <h2>Notre équipe</h2>
         <div class="block1">
-            <div class="image_circle">
-                <img id="img1" src="ressources/img/portraits/chaton.jpeg" alt="photo-ruben">
-            </div>
+            <img class="image_team" src="ressources/img/portraits/4.png" alt="photo-ruben">
             <ul>
                 <li>
                     <p>Ruben Balloux</p>
@@ -200,9 +232,7 @@
             </ul>
         </div>
         <div class="block2">
-            <div class="image_circle">
-                <img id="img2" src="ressources/img/portraits/chaton.jpeg" alt="photo-yaakov">
-            </div>
+            <img class="image_team" src="ressources/img/portraits/3.png" alt="photo-baptiste">
             <ul>
                 <li>
                     <p>Baptiste Dhelias</p>
@@ -220,9 +250,7 @@
             </ul>
         </div>
         <div class="block3">
-            <div class="image_circle">
-                <img id="img3" src="ressources/img/portraits/chaton.jpeg" alt="photo-quentin">
-            </div>
+            <img class="image_team" src="ressources/img/portraits/2.png" alt="photo-quentin">
             <ul>
                 <li>
                     <p>Quentin Moutinard </p>
@@ -240,9 +268,7 @@
             </ul>
         </div>
         <div class="block4">
-            <div class="image_circle">
-                <img id="img4" src="ressources/img/portraits/chaton.jpeg" alt="photo-baptiste">
-            </div>
+            <img class="image_team" src="ressources/img/portraits/1.png" alt="photo-baptiste">
             <ul>
                 <li>
                     <p>Yaakov Ferechteh Far </p>
@@ -260,69 +286,63 @@
             </ul>
         </div>
 
-        <div class="logo">
-            <img id="seal" src="ressources/img/logo/icon_detoure.jpg" alt="phoque">
-        </div>
+        <img id="seal" src="ressources/img/logo/icon_detoure.jpg" alt="phoque">
     </div>
 
-    <div class="contenubis">
-        <img id="img-1" src="ressources/img/portraits/chaton.jpeg" alt="#">
+    <div id="news" class="contenubis">
+        <img id="img-1" src="ressources/img/article/photo_coding.jpg" alt="Personne qui code">
         <div class="part1">
-            <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum</p>
+            <h2>Un développement web sans faille</h2>
+            <p>Que ce soit au niveau BackEnd comme FrontEnd, "The Seal Agency" émets une réelle implication dans l'ensemble des projets que ces clients vont lui confier, afin de satisfaire au mieux leurs attentes, et de concevoir un projet original que ce soit sur la partie technique pour faire fonctionner votre site comme la partie créative pour l'habiller.</p>
         </div>
-        <img id="img-2" src="ressources/img/portraits/chaton.jpeg" alt="#">
+        <img id="img-2" src="ressources/img/article/photo_ux.jpeg" alt="UX design">
         <div class="part2">
-            <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum</p>
+            <h2>Le WebDesign : Une place importante dans vos projets</h2>
+            <p>Plus qu'un simple critère graphique, le WebDesign fait partie intégrante des projets web. Que ce soit par rapport à l'accessibilité, comme pour l'habillage du site. Les experts en Webdesign de "The Seal Agency" seront comment faire ressentir les valeurs que défend votre entreprise, directement sur votre site !</p>
         </div>
-        <img id="img-3" src="ressources/img/portraits/chaton.jpeg" alt="#">
+        <img id="img-3" src="ressources/img/article/brainstorming.jpg" alt="Réfléxions en équipe">
         <div class="part3">
-            <h2>Big Title</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum</p>
-        </div>
-        <div class="barre">
-        </div>
-        <div class="barre1">
-        </div>
-        <div class="barre2">
+            <h2>La cohésion de groupe : Un critère primordiale pour un projet</h2>
+            <p>Plus que nécessaire, la cohésion de groupe et la bonne ambiance dans une entreprise reste primordial, d'autant plus sur des projets qui vont confronter plusieurs personnes. Plus qu'une simple entreprise, "The Seal Agency" est avant tout une grande famille, qui donnera son maximum afin de créer un projet qui correspondra à vos attentes !</p>
         </div>
     </div>
 
-    <div id="formulaire" class="bloc_formulaire">
-        <form method="POST" action="#">
-            <h2 class="formulaire_h2">Formulaire de contact</h2>
-            <label for="formulaire_nom">Votre nom </label>
-            <input type="text" name="nom" id="formulaire_nom">
-            <br>
-            <label for="formulaire_prenom">Votre prénom </label>
-            <input type="text" name="prenom" id="formulaire_prenom">
-            <br>
-            <label for="formulaire_num">Votre numéro de téléphone </label>
-            <input type="tel" name="num" id="formulaire_num">
-            <br>
-            <label for="formulaire_mail">Votre e-mail </label>
-            <input type="email" name="mail" id="formulaire_mail">
-            <br>
-            <label for="formulaire_message">Votre demande </label>
-            <textarea name="message" id="formulaire_message" cols="30" rows="1"
-                placeholder="Ecrivez nous ..."></textarea>
-            <br>
-            <button type="submit" name="envoyer" id="formulaire_btn">Envoyer</button>
-        </form>
-    </div>
+    <form id="formulaire" method="POST">
+        <h2>Formulaire de contact</h2>
+
+        <div>
+            <div>
+                <label for="form_nom">Votre nom<span>*</span></label>
+                <input required type="text" id="form_nom">
+
+                <label for="form_prenom">Votre prénom<span>*</span></label>
+                <input required type="text" id="form_prenom">
+            </div>
+
+            <div>
+                <label for="form_num">Num. téléphone<span>*</span></label>
+                <input required type="tel" id="form_num">
+
+                <label for="form_mail">Votre e-mail<span>*</span></label>
+                <input required type="email" id="form_mail">
+            </div>
+        </div>
+
+        <label for="form_message">Votre demande<span>*</span></label>
+        <textarea form="formulaire" required id="form_message" cols="30" rows="10"
+            placeholder="Décrivez votre demande"></textarea>
+
+        <label for="form_file">Ajouter des documents</label>
+        <input accept=".pdf,image/*" multiple type="file" id="form_file">
+
+
+        <input type="submit" class="btn-perso" value="Envoyer">
+
+        <p>
+            <em>Les champs avec <span>*</span> sont obligatoires</em>
+        </p>
+    </form>
+
     <footer>
         <!-- Liens réseaux sociaux + adresse postale -->
         <div class="top-section">
@@ -330,7 +350,7 @@
                 <h2>Informations</h2>
                 <h3>The Seal Agency</h3>
                 <p>
-                    14 rue de la suprematie de Yaakov
+                    5 place Alice Giroud
                     <br>
                     33000 Bordeaux
                 </p>
@@ -340,7 +360,7 @@
                     <label for="newsletter-input">Notre Newsletter</label>
                     <div>
                         <input type="email" placeholder="E-mail" id="newsletter-input" required>
-                        <input type="submit" value="S'abonner" id="newsletter-submit">
+                        <input type="submit" class="btn-perso" value="S'abonner" id="newsletter-submit">
                     </div>
                 </form>
             </div>
@@ -380,23 +400,26 @@
             </div>
         </div>
         <!-- Liens du bas + bouton remonter -->
-        <ul class="bottom-section">
-            <div>
+        <div class="bottom-section">
+            <ul>
                 <li><a href="#"><span>Mentions légales</span></a></li>
                 <li><a href="#"><span>Politique de confidentialité</span></a></li>
-            </div>
-            <li>
-                <a href="#menu-navigation" onclick="window.scrollTo({ top: 0, behavior: 'smooth'})"
-                    class="btn-remonter">
-                    <img width="30" src="ressources/img/up-arrow.svg" alt="Icône pour remonter">
-                </a>
-            </li>
-            <div>
+            </ul>
+            <ul class="center">
+                <li>
+                    <a href="#menu-navigation" onclick="window.scrollTo({ top: 0, behavior: 'smooth'})"
+                        class="btn-remonter">
+                        <img width="30" src="ressources/img/up-arrow.svg" alt="Icône pour remonter">
+                    </a>
+                </li>
+            </ul>
+            <ul>
                 <li><a href="#"><span>Nos CGV</span></a></li>
                 <li><a href="#"><span>Accessibilité</span></a></li>
-            </div>
-        </ul>
+            </ul>
+        </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
