@@ -603,10 +603,6 @@ footer a>span:hover:not(.btn-remonter)::after, footer a:focus:not(.btn-remonter)
     }
 }
 
-/* Adaptation pour le print */
-
-@media print {}
-
 /* Equipe */
 
 .image_team {
@@ -1048,5 +1044,13 @@ img[class*="tarif_mark"] {
     }
     .btn-perso:hover, .btn-perso:focus {
         transform: scale(1, 1);
+    }
+}
+
+/* Adaptation pour le print */
+
+@media print {
+    img {
+        display: none;
     }
 }
