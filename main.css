@@ -117,6 +117,10 @@ nav ul a:hover::after, nav ul a:focus::after {
     margin: 10px;
 }
 
+.lang-button:first-of-type {
+    border-bottom: 1px solid #fff;
+}
+
 @media screen and (max-width: 800px) {
     .menu_burger {
         min-width: 35px;
@@ -235,6 +239,12 @@ nav ul a:hover::after, nav ul a:focus::after {
 
 #presentation h2 {
     font-size: 3rem;
+    text-align: center;
+}
+
+#presentation h2 span abbr {
+    font-style: italic;
+    font-family: var(--ft-title);
 }
 
 .pres_article {
@@ -278,6 +288,75 @@ nav ul a:hover::after, nav ul a:focus::after {
     transform: translateY(-7rem);
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .pres_article:nth-child(2n+1) {
+        transform: translateY(0);
+    }
+    .pres_article:last-of-type {
+        transform: translateY(0);
+    }
+    #CTA {
+        transform: translateY(0);
+        margin: 5rem 0;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1300px) {
+    .pres_article {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .pres_article:nth-child(2n+1) {
+        flex-direction: column-reverse;
+        transform: translateY(0);
+    }
+    .pres_article:last-of-type {
+        transform: translateY(0);
+    }
+    .pres_article img {
+        width: 65%;
+    }
+    .pres_article p {
+        width: 60%;
+        margin: 1.5rem 0;
+    }
+    #CTA {
+        transform: translateY(0);
+        margin: 5rem 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        font-size: 3rem;
+    }
+    #presentation h2 {
+        font-size: 2.3rem;
+    }
+    .pres_article {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .pres_article:nth-child(2n+1) {
+        flex-direction: column-reverse;
+        transform: translateY(0);
+    }
+    .pres_article:last-of-type {
+        transform: translateY(0);
+    }
+    .pres_article img {
+        width: 95%;
+    }
+    .pres_article p {
+        width: 90%;
+        margin: 1.5rem 0;
+    }
+    #CTA {
+        transform: translateY(0);
+        margin: 5rem 0;
+    }
 }
 
 /* Footer */
@@ -403,7 +482,7 @@ footer img {
 }
 
 .bottom-section>* {
-    width: calc(100% / 3);
+    width: 40%;
     text-align: center;
 }
 
@@ -583,6 +662,11 @@ li {
     background: #bbe2f2;
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgb(202, 202, 202);
+    transition: transform 250ms ease;
+}
+
+#team>div:hover, #team>div:focus {
+    transform: scale(1.02, 1.02);
 }
 
 .block1 {
@@ -666,6 +750,9 @@ li {
         display: none;
     }
     .image_team+ul li a img:hover, .image_team+ul li a img:focus {
+        transform: scale(1, 1);
+    }
+    #team>div:hover, #team>div:focus {
         transform: scale(1, 1);
     }
 }
@@ -862,15 +949,15 @@ img[class*="tarif_mark"] {
 .contenubis {
     display: grid;
     width: 100%;
-    padding: 50px 25%;
+    padding: 50px 10%;
     grid-gap: 15px;
     grid-row-gap: 30px;
     background: #BBE2F2;
 }
 
 #img-1, #img-2, #img-3 {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     align-self: center;
     margin: auto;
 }
@@ -931,6 +1018,9 @@ img[class*="tarif_mark"] {
 /*Contenu-bis responsif*/
 
 @media only screen and (max-width: 800px) {
+    .bloc_tarif_h2 {
+        font-size: 2.3rem;
+    }
     .contenubis {
         display: block;
         padding: 5%;
