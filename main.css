@@ -956,8 +956,8 @@ img[class*="tarif_mark"] {
 }
 
 #img-1, #img-2, #img-3 {
-    width: 200px;
-    height: 200px;
+    width: 545px;
+    height: 300px;
     align-self: center;
     margin: auto;
 }
