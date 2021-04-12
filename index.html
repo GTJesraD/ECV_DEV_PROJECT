@@ -33,12 +33,13 @@
 </head>
 
 <body>
+    <!-- Ici se trouve le menu nav -->
     <nav>
         <!-- Menu burger déroulant pour le mobile -->
         <div class="menu_burger">
             <span></span>
         </div>
-
+<!-- Le logo -->
         <a class="logo" href="#">
             <img src="ressources/img/logo/icon_pas_detoure.svg" alt="Logo de Seal Agency" height="50" width="50">
         </a>
@@ -57,7 +58,7 @@
                 <a href="#formulaire">Nous contacter</a>
             </li>
         </ul>
-
+<!-- Ici le lien pour changer de langue -->
         <span>
             <a class="lang-button" style="border-bottom: 1px solid #fff;" href="index.html">Fr</a> /
 
@@ -65,13 +66,15 @@
         </span>
     </nav>
 
+
     <!-- Slideshow pleine page -->
+
     <div id="slideshow">
         <img src="ressources/img/slideshow/img1.jpg" alt="Image 1 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img2.jpg" alt="Image 2 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img3.jpg" alt="Image 3 du slideshow" class="slideshow-img">
         <img src="ressources/img/slideshow/img4.jpg" alt="Image 4 du slideshow" class="slideshow-img">
-
+<!-- Ici le call to action -->
         <button class="btn-perso">Nous découvrir</button>
     </div>
 
@@ -133,10 +136,12 @@
         <button class="btn-perso">En savoir plus</button>
     </div>
 
+    <!-- Ici on retrouve le bloc pour les carte de tarifs -->
     <div id="tarif" class="bloc_tarif">
         <h2 class="bloc_tarif_h2">Les tarifs</h2>
-
+        <!-- Ici nous avons une sous div pour pouvoir gerer le postionnement -->
         <div class="tarif_contenant">
+            <!-- Le premier bloc -->
             <div class="tarif_content_bloc1">
                 <div class="tarif_1">
                     <p class="tarif_1_titre">Basique</p>
@@ -164,6 +169,8 @@
                             alt="Mark incorrect" class="tarif_mark_2" width="25"></li>
                 </ul>
             </div>
+
+            <!-- le deuxieme bloc -->
             <div class="tarif_content_bloc2">
                 <div class="tarif_2">
                     <p class="tarif_2_titre">Avancé</p>
@@ -189,6 +196,7 @@
                             alt="Mark incorrect" class="tarif_mark_2" width="25"></li>
                 </ul>
             </div>
+            <!-- le troisieme bloc -->
             <div class="tarif_content_bloc3">
                 <div class="tarif_3">
                     <p class="tarif_3_titre">Complet</p>
@@ -217,10 +225,12 @@
             </div>
         </div>
     </div>
-
+<!-- Ici on trouve le bloc pour notre equipe -->
     <div id="team">
         <h2>Notre équipe</h2>
         <div class="blocks">
+
+            <!-- Bloc pour la premiere personne -->
             <div class="block1">
                 <img class="image_team" src="ressources/img/portraits/4.png" alt="photo-ruben">
                 <ul>
@@ -239,6 +249,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Bloc pour la deuxieme personne -->
             <div class="block2">
                 <img class="image_team" src="ressources/img/portraits/3.png" alt="photo-baptiste">
                 <ul>
@@ -257,6 +269,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Bloc pour le troisieme personne -->
             <div class="block3">
                 <img class="image_team" src="ressources/img/portraits/2.png" alt="photo-quentin">
                 <ul>
@@ -275,6 +289,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!-- Bloc pour la quatrieme personne -->
             <div class="block4">
                 <img class="image_team" src="ressources/img/portraits/1.png" alt="photo-baptiste">
                 <ul>
@@ -295,9 +311,10 @@
             </div>
         </div>
     </div>
-
+<!-- On retrouve ici le bloc d'article -->
     <div id="news" class="contenubis">
         <img id="img-1" src="ressources/img/article/photo_coding.jpg" alt="Personne qui code">
+        <!-- L'article 1 -->
         <div class="part1">
             <h2>Un développement web sans faille</h2>
             <p>Que ce soit au niveau BackEnd comme FrontEnd, "The Seal Agency" émets une réelle implication dans
@@ -307,6 +324,7 @@
         </div>
         <img id="img-2" src="ressources/img/article/photo_ux.jpeg" alt="UX design">
         <div class="part2">
+            <!-- L'article 2 -->
             <h2>Le WebDesign : Une place importante dans vos projets</h2>
             <p>Plus qu'un simple critère graphique, le WebDesign fait partie intégrante des projets web. Que ce soit par
                 rapport à l'accessibilité, comme pour l'habillage du site. Les experts en Webdesign de "The Seal Agency"
@@ -315,6 +333,7 @@
         </div>
         <img id="img-3" src="ressources/img/article/brainstorming.jpg" alt="Réfléxions en équipe">
         <div class="part3">
+            <!-- L'article 3 -->
             <h2>La cohésion de groupe : Un critère primordiale pour un projet</h2>
             <p>Plus que nécessaire, la cohésion de groupe et la bonne ambiance dans une entreprise reste primordial,
                 d'autant plus sur des projets qui vont confronter plusieurs personnes. Plus qu'une simple entreprise,
@@ -323,6 +342,7 @@
         </div>
     </div>
 
+    <!-- Ici se trouve le formulaire de contact -->
     <form id="formulaire" action="#" method="POST">
         <h2>Formulaire de contact</h2>
 
@@ -351,7 +371,7 @@
         <label for="form_file">Ajouter des documents</label>
         <input accept=".pdf,image/*" multiple type="file" id="form_file">
 
-
+<!-- Ici le bouton pour l'envoyer -->
         <input type="submit" class="btn-perso" value="Envoyer">
 
         <p>
