@@ -1,0 +1,11 @@
+/* Adaptation pour le print */
+
+img, nav, .btn-perso, #formulaire, .bottom-section, .social-media, .infos-footer form {
+    display: none !important;
+}
+
+* {
+    color: #000 !important;
+    font-family: 'Montserrat', sans-serif;
+    list-style-type: none;
+}
