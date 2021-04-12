@@ -118,10 +118,6 @@ nav ul a:hover::after, nav ul a:focus::after {
     margin: 10px;
 }
 
-.lang-button:first-of-type {
-    border-bottom: 1px solid #fff;
-}
-
 @media screen and (max-width: 800px) {
     .menu_burger {
         min-width: 35px;
