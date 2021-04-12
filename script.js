@@ -37,7 +37,7 @@ bouton_burger.addEventListener('click', () => {
 /* CODE POUR LE CTA "Nous découvrir" du slideshow */
 
 const bouton_slideshow = document.querySelector('#slideshow button');
-var prod = false;
+var prod = true;
 
 bouton_slideshow.addEventListener('click', () => {
     // On change l'url de la page avec le #presentation. C'est l'équivalent de la technique avec les liens
