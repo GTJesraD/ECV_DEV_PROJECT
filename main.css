@@ -73,6 +73,8 @@ nav {
     color: var(--clr-txt);
 }
 
+/*Pas de menu burger en Desktop*/
+
 .menu_burger {
     display: none;
 }
@@ -118,6 +120,7 @@ nav ul a:hover::after, nav ul a:focus::after {
     margin: 10px;
 }
 
+/*Menu burger */
 @media screen and (max-width: 800px) {
     .menu_burger {
         min-width: 35px;
@@ -140,6 +143,7 @@ nav ul a:hover::after, nav ul a:focus::after {
         border-radius: 4px;
         transition: background-color 0.5s ease-in-out;
     }
+    /*Barres du haut et du bas*/
     .menu_burger span:before, .menu_burger span:after {
         content: '';
         position: absolute;
@@ -149,6 +153,8 @@ nav ul a:hover::after, nav ul a:focus::after {
         border-radius: 4px;
         transition: transform 0.5s ease-in-out;
     }
+
+    /* Animation clique*/
     .menu_burger span:before {
         transform: translateY(-10px);
     }
@@ -726,6 +732,9 @@ li {
         width: 210px;
         height: 210px;
     }
+  
+/*Focus images Team*/
+
     .image_team+ul li a img:hover, .image_team+ul li a img:focus {
         transform: scale(1, 1);
     }
@@ -1024,6 +1033,7 @@ img[class*="tarif_mark"] {
     .contenubis h2 {
         padding-bottom: 2%;
     }
+/*Focus partie tarif*/
     div[class*=tarif_content_bloc]:hover, div[class*=tarif_content_bloc]:focus {
         transform: scale(1, 1);
     }
