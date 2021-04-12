@@ -28,10 +28,18 @@ function slider() {
 
 const bouton_burger = document.querySelector('.menu_burger');
 const contenu = document.querySelector('nav ul');
+const liens_menu = document.querySelectorAll('nav ul li a');
 
 bouton_burger.addEventListener('click', () => {
     bouton_burger.classList.toggle('menu_burger_active');
     contenu.classList.toggle('contenu_active');
+});
+
+liens_menu.forEach(lien => {
+    lien.addEventListener('click', () => {
+        bouton_burger.classList.toggle('menu_burger_active');
+        contenu.classList.toggle('contenu_active');
+    });
 });
 
 /* CODE POUR LE CTA "Nous découvrir" du slideshow */
