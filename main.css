@@ -8,7 +8,7 @@
     --ft-txt: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
-
+ /* On definit des regles appliqué a tout les selecteurs pour une reinisatlisation */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +23,7 @@ body {
     overflow-x: hidden;
 }
 
+/* on applique les premieres polices */
 h1, h2, h3 {
     font-family: var(--ft-title);
     color: var(--clr-bg) !important;
@@ -33,7 +34,7 @@ h1 {
     font-size: 4rem;
     text-align: center;
 }
-
+/* ici on retrouve le design de nos differents bouton */
 .btn-perso {
     margin: 0 !important;
     background: var(--clr-acc);
@@ -296,6 +297,8 @@ nav ul a:hover::after, nav ul a:focus::after {
     display: flex;
     justify-content: center;
 }
+
+ /* responsive de article */
 
 @media screen and (max-width: 1200px) {
     .pres_article:nth-child(2n+1) {
