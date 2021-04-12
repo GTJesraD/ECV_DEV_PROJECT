@@ -96,7 +96,7 @@ nav a {
     color: var(--clr-txt);
 }
 
-nav ul a:not(.logo, .lang-button)::after {
+nav ul a:not(.lang-button)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -454,9 +454,9 @@ footer img {
     transform: scale(1.2, 1.2);
 }
 
-/* On applique une marge en bas a tout les elements de la section haute du footer sauf: div, h2, ul, form */
+/* On applique une marge en bas a tout les elements de la section haute du footer sauf: h2, ul, form */
 
-.top-section *:not(div, h2, ul, form) {
+.top-section :not(h2):not(ul):not(form) {
     margin-bottom: .4rem;
 }
 
