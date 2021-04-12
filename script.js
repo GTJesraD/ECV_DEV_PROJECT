@@ -41,7 +41,7 @@ const bouton_slideshow = document.querySelector('#slideshow button');
 bouton_slideshow.addEventListener('click', () => {
     // On change l'url de la page avec le #presentation. C'est l'équivalent de la technique avec les liens
     // mais en utilisant un élément button
-    document.location.href = '/index.html#presentation';
+    document.location.href += '#presentation';
 });
 
 /* CODE POUR LE CTA "En savoir plus" de la partie presentation */
@@ -50,5 +50,5 @@ const bouton_pres = document.querySelector('#CTA button');
 
 bouton_pres.addEventListener('click', () => {
     // On change l'url de la page avec le #tarif.
-    document.location.href = '/index.html#tarif';
+    document.location.href += '#tarif';
 });
